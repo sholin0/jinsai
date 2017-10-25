@@ -261,8 +261,6 @@ animation-timing-function: steps(28);
 background-position: right;
 }
 
-
-
 .tab_co{ width:100%;}
 .tab_co .tab{ overflow:hidden;background:#f5f5f5;min-height: 48px;}
 .tab_co .tab a{ display:block; padding:9px 6px 9px 9px; float:left;color:#296fb6;margin-top: 5px;margin-left: 15px;}
@@ -275,140 +273,32 @@ background-position: right;
 .tab_co .content_img li{float:left;text-align: center;}
 
 /*人才发展*/
-
-.r-container {
-	width: 100%;
-}
-
-.r-container-text {
-	clear: both;
-}
-
-.r-container-text p {
-	color: #797979;
-	font-size: 14px;
-}
-
-.r-container-text p:first-child {
-	padding-top: 50px;
-}
-
-.r-container-text p:last-child {
-	margin-top: 45px;
-}
-
-.show-time {
-	width: 100%;
-	margin-top: 25px;
-}
-
-.show-time img {
-	width: 100%;
-	height: 100%;
-}
-
-
+.r-container {width: 100%;}
+.r-container-text {clear: both;}
+.r-container-text p {color: #797979;font-size: 14px;}
+.r-container-text p:first-child {padding-top: 50px;}
+.r-container-text p:last-child {margin-top: 45px;}
+.show-time {width: 100%;margin-top: 25px;}
+.show-time img {width: 100%;height: 100%;}
 /*招聘流程*/
-
-.zp-container {
-	width: 100%;
-	padding-bottom: 150px;
-}
-
-.zp-container-text {
-	clear: both;
-	margin-top: 50px;
-}
-
-.slogan {
-	width: 100%;
-	padding-top: 30px;
-	display: block;
-	padding-bottom: 20px;
-	font-size: 18px;
-	border-bottom: 1px dashed #ECECEC;
-	color: #0055aa;
-}
-
-.zp-text {
-	width: 100%;
-}
-
-.zp-text a {
-	display: block;
-	color: #898989;
-	font-size: 16px;
-	margin-top: 20px
-}
-
-.zp-text a:first-child {
-	color: #a2a2a2;
-	font-size: 12px;
-}
-
-.zp-text1 {
-	text-indent: 4em;
-}
-
-
+.zp-container {width: 100%;padding-bottom: 150px;}
+.zp-container-text {clear: both;margin-top: 50px;}
+.slogan {width: 100%;padding-top: 30px;display: block;padding-bottom: 20px;font-size: 18px;border-bottom: 1px dashed #ECECEC;color: #0055aa;}
+.zp-text {width: 100%;}
+.zp-text a {display: block;color: #898989;font-size: 16px;margin-top: 20px}
+.zp-text a:first-child {color: #a2a2a2;font-size: 12px;}
+.zp-text1 {text-indent: 4em;}
 /*社会招聘*/
-
-.s-container {
-	max-width: 1180px;
-	margin: auto;
-}
-
-.s-ctext1 {
-	width: 100%;
-	margin-top: 30px;
-}
-
-.text-color {
-	color: #6592d5;
-	font-size: 16px;
-}
-
-.search {
-	width: 580px;
-	height: 34px;
-	border: 1px solid #6592d5;
-	position: relative;
-	margin-top: 10px;
-}
-
-.search input {
-	width: 100%;
-	height: 100%;
-}
-
-.s-img {
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-.word {
-	width: 100%;
-	padding-bottom: 30px;
-	border-bottom: 1px solid #e5e5e5;
-	position: relative;
-}
-
-.work {
-	width: 100%;
-	margin-top: 20px;
-}
-
-.work a {
-	display: inline-block;
-	margin-left: 10px;
-	font-size: 14px;
-}
-
-.work a:nth-of-type(2) {
-	color: #6592d5;
-}
-
+.s-container {max-width: 1180px;margin: auto;}
+.s-ctext1 {width: 100%;margin-top: 30px;}
+.text-color {color: #6592d5;font-size: 16px;}
+.search {width: 580px;height: 34px;border: 1px solid #6592d5;position: relative;margin-top: 10px;}
+.search input {width: 100%;height: 100%;}
+.s-img {position: absolute;top: 0;right: 0;}
+.word {width: 100%;padding-bottom: 30px;border-bottom: 1px solid #e5e5e5;position: relative;}
+.work {width: 100%;margin-top: 20px;}
+.work a {display: inline-block;margin-left: 10px;font-size: 14px;}
+.work a:nth-of-type(2) {color: #6592d5;}
 .work1 {
 	width: 50%;
 	border: 1px solid gray;
@@ -421,37 +311,11 @@ background-position: right;
 	background: #F5F5F5;
 	display: none;
 }
-
-.ctrl {
-	display: block;
-}
-
-.bt {
-	width: 90%;
-	margin: auto;
-	text-align: right;
-	display: block;
-}
-
-.work1 ul {
-	width: 90%;
-	margin: auto;
-	font-size: 0;
-}
-
-.work1 ul li {
-	width: 33.3%;
-	margin-top: 15px;
-	font-size: 14px;
-	text-align: center;
-	display: inline-block;
-	color: black;
-}
-
-.work1 ul li:hover {
-	color: #007DCD;
-}
-
+.ctrl {display: block;}
+.bt {width: 90%;margin: auto;text-align: right;display: block;}
+.work1 ul {width: 90%;margin: auto;font-size: 0;}
+.work1 ul li {width: 33.3%;margin-top: 15px;font-size: 14px;text-align: center;display: inline-block;color: black;}
+.work1 ul li:hover {color: #007DCD;}
 .work2 {
 	width: 50%;
 	border: 1px solid gray;
@@ -464,717 +328,136 @@ background-position: right;
 	padding-bottom: 25px;
 	background: #F5F5F5;
 }
-
-.bt2 {
-	width: 90%;
-	margin: auto;
-	text-align: right;
-	display: block;
-}
-
-.work2 ul {
-	width: 90%;
-	margin: auto;
-	font-size: 0;
-}
-
-.work2 ul li {
-	width: 33.3%;
-	margin-top: 15px;
-	font-size: 14px;
-	text-align: center;
-	display: inline-block;
-	color: black;
-}
-
-.work2 ul li:hover {
-	color: #007DCD;
-}
-
-.type {
-	margin-top: 30px;
-	width: 100%;
-}
-
-.type input {
-	margin-left: 15px;
-	vertical-align: text-bottom;
-	margin-bottom: 2px;
-}
-
-.type a {
-	font-size: 12px;
-	color: #666666;
-}
-
-.s-ctext3 {
-	width: 100%;
-}
-
-.s-list {
-	width: 100%;
-	height: 40px;
-	font-size: 0;
-	background: #f5f5f5;
-	margin-top: 20px;
-}
-
-.s-list a {
-	width: 16%;
-	line-height: 40px;
-	font-size: 14px;
-	text-align: center;
-	color: #636363;
-	display: inline-block;
-}
-
-.s-list a:first-child {
-	text-align: left;
-	text-indent: 2em;
-	margin-right: 4%;
-}
-
-.s-list1 {
-	width: 100%;
-	height: 40px;
-	font-size: 0;
-	margin-top: 10px;
-}
-
-.s-list1 a {
-	width: 16%;
-	line-height: 40px;
-	font-size: 14px;
-	text-align: center;
-	color: black;
-	display: inline-block;
-}
-
-.s-list1 a:first-child {
-	text-align: left;
-	text-indent: 2em;
-	width: 20%;
-}
-
-.s-list1 a:last-child {
-	width: 60px;
-	height: 30px;
-	line-height: 30px;
-	color: white;
-	background: #0055aa;
-	margin-left: 5.5%;
-}
-
-.s-list1 a:last-child:hover {
-	color: white;
-}
-
-.s-list1 a:hover {
-	color: #0053a9;
-}
-
-
+.bt2 {width: 90%;margin: auto;text-align: right;display: block;}
+.work2 ul {width: 90%;margin: auto;font-size: 0;}
+.work2 ul li {width: 33.3%;margin-top: 15px;font-size: 14px;text-align: center;display: inline-block;color: black;}
+.work2 ul li:hover {color: #007DCD;}
+.type {margin-top: 30px;width: 100%;}
+.type input {margin-left: 15px;vertical-align: text-bottom;margin-bottom: 2px;}
+.type a {font-size: 12px;color: #666666;}
+.s-ctext3 {width: 100%;}
+.s-list {width: 100%;height: 40px;font-size: 0;background: #f5f5f5;margin-top: 20px;}
+.s-list a {width: 16%;line-height: 40px;font-size: 14px;text-align: center;color: #636363;display: inline-block;}
+.s-list a:first-child {text-align: left;text-indent: 2em;margin-right: 4%;}
+.s-list1 {width: 100%;height: 40px;font-size: 0;margin-top: 10px;}
+.s-list1 a{width: 16%;line-height: 40px;font-size: 14px;text-align: center;color: black;display: inline-block;}
+.s-list1 a:first-child{text-align: left;text-indent: 2em;width: 20%;}
+.s-list1 a:last-child{width: 60px;height: 30px;line-height: 30px;color: white;background: #0055aa;margin-left: 5.5%;}
+.s-list1 a:last-child:hover{color: white;}
+.s-list1 a:hover {color: #0053a9;}
 /*公司发展*/
-
-.f-container {
-	width: 100%;
-	padding-top: 30px;
-	padding-bottom: 100px;
-}
-
-.up {
-	width: 100%;
-	text-align: center;
-	margin-top: 30px;
-}
-
-.f-cimg1 {
-	width: 100%;
-	text-align: center;
-	margin-top: 7px;
-}
-
-.f-cimg2 {
-	width: 100%;
-	text-align: center;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	position: relative;
-}
-
-.c2text {
-	position: absolute;
-	width: 50%;
-	top: 0;
-	left: -2%;
-}
-
-.c2text>a {
-	display: block;
-	text-align: right;
-}
-
-.c2text1 {
-	color: #0046a2;
-	font-weight: bold;
-}
-
-.c2text2 {
-	font-size: 14px;
-	color: #8b8b8b;
-	margin-top: 10px;
-}
-
-.f-cimg3 {
-	width: 100%;
-	text-align: center;
-	position: relative;
-	margin-bottom: 15px;
-	margin-top: 15px;
-}
-
-.c2rightext {
-	position: absolute;
-	width: 50%;
-	top: 0;
-	left: 52%;
-}
-
-.c2rightext>a {
-	display: block;
-	text-align: left;
-}
-
-.c2rightext1 {
-	color: #dd9212;
-	font-weight: bold;
-}
-
-.c2rightext2 {
-	font-size: 14px;
-	color: #8b8b8b;
-	margin-top: 10px;
-}
-
-.v2 {
-	width: 100%;
-	text-align: center;
-}
-
-.v3 {
-	width: 100%;
-	text-align: center;
-}
-
-.v4 {
-	width: 100%;
-	text-align: center;
-}
-
-.v5 {
-	width: 100%;
-	text-align: center;
-}
-
-.down {
-	width: 100%;
-	text-align: center;
-	margin-top: 30px;
-}
-
-
+.f-container {width: 100%;padding-top: 30px;padding-bottom: 100px;}
+.up{width: 100%;text-align: center;margin-top: 30px;}
+.f-cimg1{width: 100%;text-align: center;margin-top: 7px;}
+.f-cimg2{width: 100%;text-align: center;margin-top: 15px;margin-bottom: 15px;position: relative;}
+.c2text{position: absolute;width: 50%;top: 0;left: -2%;}
+.c2text>a{display: block;text-align: right;}
+.c2text1{color: #0046a2;font-weight: bold;}
+.c2text2{font-size: 14px;color: #8b8b8b;margin-top: 10px;}
+.f-cimg3{width: 100%;text-align: center;position: relative;margin-bottom: 15px;margin-top: 15px;}
+.c2rightext{position: absolute;width: 50%;top: 0;left: 52%;}
+.c2rightext>a{display: block;text-align: left;}
+.c2rightext1 {color: #dd9212;font-weight: bold;}
+.c2rightext2{font-size: 14px;color: #8b8b8b;margin-top: 10px;}
+.v2{width: 100%;text-align: center;}
+.v3{width: 100%;text-align: center;}
+.v4{width: 100%;text-align: center;}
+.v5{width: 100%;text-align: center;}
+.down{width: 100%;text-align: center;margin-top: 30px;}
 /*人才理念*/
-
-.r-container {
-	width: 100%;
-}
-
-.r-container-text {
-	clear: both;
-}
-
-.r-container-text p {
-	color: #8a8a8a;
-}
-
-.r-container-text p:first-child {
-	line-height: 25px;
-	padding-top: 50px;
-}
-
-.r-container-text p:nth-of-type(2) {
-	margin-top: 40px;
-}
-
-.r-container-text p:nth-of-type(3) {
-	margin-top: 45px;
-}
-
-.r-container-text p:nth-of-type(4) {
-	margin-top: 45px;
-}
-
-.r-container-text p:last-child {
-	line-height: 34px;
-	margin-top: 45px;
-	margin-bottom: 28px;
-}
-
-.r-container-text>div {
-	width: 100%;
-	margin-top: 40px;
-}
-
-.r-container-text>div>img {
-	width: 100%;
-}
-
-.r-container-text>p>strong {
-	color: #737373;
-}
-
-
+.r-container{width: 100%;}
+.r-container-text{clear: both;}
+.r-container-text p{color: #8a8a8a;}
+.r-container-text p:first-child{line-height: 25px;padding-top: 50px;}
+.r-container-text p:nth-of-type(2){margin-top: 40px;}
+.r-container-text p:nth-of-type(3){margin-top: 45px;}
+.r-container-text p:nth-of-type(4){margin-top: 45px;}
+.r-container-text p:last-child {line-height: 34px;margin-top: 45px;margin-bottom: 28px;}
+.r-container-text>div{width: 100%;margin-top: 40px;}
+.r-container-text>div>img{width: 100%;}
+.r-container-text>p>strong{color: #737373;}
 /*//人才招聘详情页*/
-
-.zpxx-container {
-	max-width: 1180px;
-	margin: auto;
-}
-
-.zpxx-ctext1 {
-	width: 100%;
-	border: 1px solid #e5e5e5;
-	padding-top: 30px;
-	padding-bottom: 27px;
-}
-
-.ztbox1 {
-	width: 90%;
-	margin-left: 30px;
-}
-
-.blue {
-	font-size: 18px;
-	color: #0155aa;
-	display: block;
-}
-
-.zpxx-list {
-	width: 75%;
-	font-size: 0;
-}
-
-.zpxx-list li {
-	width: 33.3%;
-	display: inline-block;
-	text-align: left;
-	color: black;
-	font-size: 14px;
-	margin-top: 27px;
-}
-
-.zpxx-list li a {
-	color: #777777;
-}
-
-.zpxx-ctext2 {
-	width: 100%;
-	border: 1px solid #e5e5e5;
-	padding-top: 30px;
-	border-top: none;
-	padding-bottom: 40px;
-}
-
-.zpxx-list2 {
-	width: 100%;
-}
-
-.zpxx-list2 li {
-	font-size: 14px;
-	color: black;
-	margin-top: 20px;
-}
-
-.one {
-	margin-top: 22px;
-}
-
-.two {
-	margin-top: 30px;
-}
-
-.zpxx-ctext3 {
-	width: 100%;
-	margin-top: 40px;
-	margin-bottom: 60px;
-}
-
-.ct3box {
-	width: 80%;
-	margin: auto;
-}
-
-.ct3box a {
-	width: 20%;
-	font-size: 14px;
-	height: 40px;
-	line-height: 40px;
-	color: white;
-	background: #0055aa;
-	text-align: center;
-	margin-left: 4%;
-	display: inline-block;
-}
-
-
+.zpxx-container{max-width: 1180px;margin: auto;}
+.zpxx-ctext1{width: 100%;border: 1px solid #e5e5e5;padding-top: 30px;padding-bottom: 27px;}
+.ztbox1{width: 90%;margin-left: 30px;}
+.blue{font-size: 18px;color: #0155aa;display: block;}
+.zpxx-list{width: 75%;font-size: 0;}
+.zpxx-list li{width: 33.3%;display: inline-block;text-align: left;color: black;font-size: 14px;margin-top: 27px;}
+.zpxx-list li a{color: #777777;}
+.zpxx-ctext2{width: 100%;border: 1px solid #e5e5e5;padding-top: 30px;border-top: none;padding-bottom: 40px;}
+.zpxx-list2{width: 100%;}
+.zpxx-list2 li{font-size: 14px;color: black;margin-top: 20px;}
+.one{margin-top: 22px;}
+.two{margin-top: 30px;}
+.zpxx-ctext3{width: 100%;margin-top: 40px;margin-bottom: 60px;}
+.ct3box{width: 80%;margin: auto;
+.ct3box a {width: 20%;font-size: 14px;height: 40px;line-height: 40px;color: white;background: #0055aa;text-align: center;margin-left: 4%;display: inline-block;}
 /*宣讲行程*/
-
-.x-container {
-	width: 100%;
-	padding-bottom: 75px;
-}
-
-.x-ctext1:first-child {
-	padding-top: 20px;
-}
-
-.x-ctext1 {
-	width: 100%;
-	margin-top: 60px;
-}
-
-.x-ctbox1 {
-	width: 50%;
-	display: inline-block;
-}
-
-.x-a1 {
-	font-size: 18px;
-	color: #0055aa;
-}
-
-.x-a2 {
-	font-size: 14px;
-	color: #a2a2a2;
-	margin-top: 15px;
-}
-
-.little {
-	font-size: 12px;
-	color: #A2A2A2;
-}
-
-.x-ctbox2 {
-	width: 250px;
-	height: 120px;
-	border: 1px solid gray;
-	float: right;
-}
-
-.x-ctbox2 img {
-	width: 100%;
-	height: 100%;
-}
-
-
+.x-container{width: 100%;padding-bottom: 75px;}
+.x-ctext1:first-child{padding-top: 20px;}
+.x-ctext1{width: 100%;margin-top: 60px;}
+.x-ctbox1{width: 50%;display: inline-block;}
+.x-a1{font-size: 18px;color: #0055aa;}
+.x-a2{font-size: 14px;color: #a2a2a2;margin-top: 15px;}
+.little{font-size: 12px;color: #A2A2A2;}
+.x-ctbox2{width: 250px;height: 120px;border: 1px solid gray;float: right;}
+.x-ctbox2 img{width: 100%;height: 100%;}
 /*校园招聘职位*/
-
-.xz-container {
-	max-width: 1180px;
-	margin: auto;
-}
-
-.xz-ctext1 {
-	width: 100%;
-}
-
-.xz-ctext1 select {
-	width: 20%;
-	height: 50px;
-	border: 1px solid #0055aa;
-	border-radius: 4px;
-	margin-left: 2.0%;
-}
-
-.xz-ctext1 select:first-child {
-	margin-left: 0px;
-}
-
+.xz-container{max-width: 1180px;margin: auto;}
+.xz-ctext1{width: 100%;}
+.xz-ctext1 select{width: 20%;height: 50px;border: 1px solid #0055aa;border-radius: 4px;margin-left: 2.0%;}
+.xz-ctext1 select:first-child{margin-left: 0px;}
 select {
 	/*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
 	border: solid 1px #000;
 	/*很关键：将默认的select选择框样式清除*/
 	/*appearance:none;
 -moz-appearance:none;
-
 /*将背景改为红色*/
 	background: white;
 	/*加padding防止文字覆盖*/
 	padding-right: 14px;
 }
-
-
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-
-
 /*select::-ms-expand { display: none; }*/
-
-.xz-a1 {
-	width: 10%;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-	color: white;
-	font-size: 14px;
-	float: right;
-	display: block;
-	background: #3f51b5;
-	border-radius: 2px;
-}
-
-.xz-a1:hover {
-	color: white;
-}
-
-.xz-ctext2 {
-	width: 100%;
-	margin-top: 20px;
-	background: #f6f6f6;
-	padding-bottom: 15px;
-	padding-top: 15px;
-}
-
-.xz-text1 {
-	width: 96%;
-	margin: auto;
-	font-size: 26px;
-}
-
-.now {
-	font-size: 14px;
-	color: white;
-	height: 40px;
-	line-height: 40px;
-	width: 120px;
-	float: right;
-	text-align: center;
-	background: #3f51b5;
-	display: block;
-}
-
-.now:hover {
-	color: white;
-}
-
-.xz-text2 {
-	width: 96%;
-	margin: auto;
-	margin-top: 25px;
-}
-
-.xz-text2 p {
-	font-size: 15px;
-	color: #777777;
-	text-indent: 2em;
-	margin-top: 10px;
-}
-
-.xz-text2 p:first-child {
-	text-indent: 0em;
-}
-
-.xz-text2 p:first-child>a {
-	display: inline-block;
-	height: 25px;
-	line-height: 25px;
-}
-
-.xz-a2 {
-	background: url(../images/zw1_06.png) no-repeat left center;
-	text-indent: 2em;
-}
-
-.xz-a3 {
-	background: url(../images/zw1_03.png) no-repeat left center;
-	text-indent: 2em;
-	margin-left: 100px;
-}
-
-.xz-text2 p:nth-of-type(2) {
-	background: url(../images/zw_11.gif) no-repeat left center;
-}
-
-.xz-a4 {
-	font-size: 14px;
-	color: black;
-	float: right;
-}
+.xz-a1{width: 10%;height: 50px;line-height: 50px;text-align: center;color: white;font-size: 14px;float: right;display: block;background: #3f51b5;border-radius: 2px;}
+.xz-a1:hover{color: white;}
+.xz-ctext2{width: 100%;margin-top: 20px;background: #f6f6f6;padding-bottom: 15px;padding-top: 15px;}
+.xz-text1{width: 96%;margin: auto;font-size: 26px;}
+.now{font-size: 14px;color: white;height: 40px;line-height: 40px;width: 120px;float: right;text-align: center;background: #3f51b5;display: block;}
+.now:hover{color: white;}
+.xz-text2{width: 96%;margin: auto;margin-top: 25px;}
+.xz-text2 p{font-size: 15px;color: #777777;text-indent: 2em;margin-top: 10px;}
+.xz-text2 p:first-child{text-indent: 0em;}
+.xz-text2 p:first-child>a{display: inline-block;height: 25px;line-height: 25px;}
+.xz-a2{background: url(../images/zw1_06.png) no-repeat left center;text-indent: 2em;}
+.xz-a3{background: url(../images/zw1_03.png) no-repeat left center;text-indent: 2em;margin-left: 100px;}
+.xz-text2 p:nth-of-type(2){background: url(../images/zw_11.gif) no-repeat left center;}
+.xz-a4 {font-size: 14px;color: black;float: right;}
 
 
 /*校园招聘人才项目*/
-
-.xm-container {
-	width: 100%;
-	padding-top: 70px;
-}
-
-.xm-ctext1 {
-	width: 100%;
-}
-
-.xm-ctbox1 {
-	width: 49%;
-	height: 280px;
-	display: inline-block;
-	border: 1px solid gainsboro;
-	box-sizing: border-box;
-}
-
-.xm-ctbox2 {
-	width: 49%;
-	height: 280px;
-	display: inline-block;
-	border: 1px solid gainsboro;
-	box-sizing: border-box;
-	float: right;
-	background: #0055aa;
-}
-
-.xm-ctbox2>p {
-	color: white;
-	font-size: 14px;
-	width: 87%;
-	margin: auto;
-	margin-top: 20px;
-	height: 240px;
-	vertical-align: top;
-}
-
-.xm-ctext2 {
-	margin-top: 70px;
-	font-size: 18px;
-	color: #0049a4;
-	padding-bottom: 20px;
-	border-bottom: 1px dashed #e5e5e5;
-}
-
-.xm-list1 {
-	width: 100%;
-	font-size: 0;
-	margin-top: 60px;
-}
-
-.xm-list1 li {
-	width: 33.3%;
-	display: inline-block;
-	text-align: center;
-}
-
-.xm-list1 a {
-	font-size: 14px;
-	color: #898989;
-	display: block;
-	margin-top: 27px;
-}
-
-.xm-list2 {
-	width: 100%;
-	font-size: 0;
-}
-
-.xm-list2 li {
-	width: 50%;
-	text-align: center;
-	display: inline-block;
-	margin-top: 30px;
-}
-
-.xm-list2 li a {
-	display: block;
-	width: 90%;
-	margin-top: 20px;
-	font-size: 14px;
-	color: #909090;
-}
-
-.xm-one {
-	margin-top: 130px;
-}
-
-.xm-list3 {
-	width: 100%;
-	font-size: 0;
-	margin-top: 20px;
-}
-
-.xm-list3 li {
-	width: 20%;
-	height: 300px;
-	float: left;
-	text-align: center;
-}
-
-.xm-list3 li:nth-of-type(2) {
-	margin-top: 10px;
-}
-
-.xm-list3 li:nth-of-type(4) {
-	margin-top: 10px;
-}
-
-.xm-list3 li:nth-of-type(2)>img:nth-of-type(2) {
-	display: none;
-}
-
-.xm-list3 li:nth-of-type(4)>img:nth-of-type(2) {
-	display: none;
-}
-
-.xm-list3 li a {
-	display: block;
-	margin-top: 10px;
-	font-size: 14px;
-	color: #909090;
-}
-
-.xm-list3 li>img:nth-of-type(2) {
-	margin-top: 10px;
-}
-
-.xm-list3 li>img:nth-of-type(3) {
-	margin-top: 10px;
-}
-
-.xm-list3 li>img:nth-of-type(4) {
-	margin-top: 10px;
-}
-
-
+.xm-container{width: 100%;padding-top: 70px;}
+.xm-ctext1{width: 100%;}
+.xm-ctbox1{width: 49%;height: 280px;display: inline-block;border: 1px solid gainsboro;box-sizing: border-box;}
+.xm-ctbox2{width: 49%;height: 280px;display: inline-block;border: 1px solid gainsboro;box-sizing: border-box;float: right;background: #0055aa;}
+.xm-ctbox2>p{color: white;font-size: 14px;width: 87%;margin: auto;margin-top: 20px;height: 240px;vertical-align: top;}
+.xm-ctext2{margin-top: 70px;font-size: 18px;color: #0049a4;padding-bottom: 20px;border-bottom: 1px dashed #e5e5e5;}
+.xm-list1{width: 100%;font-size: 0;margin-top: 60px;}
+.xm-list1 li{width: 33.3%;display: inline-block;text-align: center;}
+.xm-list1 a {font-size: 14px;color: #898989;display: block;margin-top: 27px;}
+.xm-list2 {width: 100%;font-size: 0;}
+.xm-list2 li{width: 50%;text-align: center;display: inline-block;margin-top: 30px;}
+.xm-list2 li a {display: block;width: 90%;margin-top: 20px;font-size: 14px;color: #909090;}
+.xm-one{margin-top: 130px;}
+.xm-list3 {width: 100%;font-size: 0;margin-top: 20px;}
+.xm-list3 li {width: 20%;height: 300px;float: left;text-align: center;}
+.xm-list3 li:nth-of-type(2){margin-top: 10px;}
+.xm-list3 li:nth-of-type(4){margin-top: 10px;}
+.xm-list3 li:nth-of-type(2)>img:nth-of-type(2){display: none;}
+.xm-list3 li:nth-of-type(4)>img:nth-of-type(2){display: none;}
+.xm-list3 li a {display: block;margin-top: 10px;font-size: 14px;color: #909090;}
+.xm-list3 li>img:nth-of-type(2){margin-top: 10px;}
+.xm-list3 li>img:nth-of-type(3){margin-top: 10px;}
+.xm-list3 li>img:nth-of-type(4){margin-top: 10px;}
 /*人才项目适配*/
-
-@media screen and (max-width: 640px) {
-	.xm-list2 li {
-		display: block;
-		width: 100%;
-		margin-top: 40px;
-	}
-	.xm-list2 li a {
-		margin: auto;
-		margin-top: 20px;
-	}
-	.xm-one {
-		margin-top: 0px;
-	}
-	.xm-ctext2 {
-		margin-top: 60px;
-	}
-	.xm-ctbox1 {
-		width: 100%;
-	}
-	.xm-ctbox2 {
-		width: 100%;
-		float: none;
-		display: block;
-		overflow-y: scroll;
-	}
-}
