@@ -1,5 +1,5 @@
 @media screen and (min-width: 1200px) {
-	.container{width: 1180px;}
+	.container{max-width: 1180px;}
 	body{font-size:14px; }
 }
 
@@ -93,9 +93,17 @@
 
 @media (max-width: 768px) {
 .autoWidth{width: 96%;margin: auto;}
+
+.csd_detailes_top h3{float: left;width: auto!important;line-height:none!important;}
+.csd_detailes .csd_detailes_top{border-bottom: 1px solid #dfdfdf; width: 100%;float: left;}
+
+.zpxx-container{float: left;}
+
+.Cam_Rec_list a{width: 100%!important;float: none!important;clear: both;}
+
 .h_top{display: none;}
 .bread{display: none;}
-.mo_bread{display: inline-block;float: right;padding: 10px;}
+.mo_bread{display: inline-block;float: right;padding: 3.75% 2% 2.5% 0;}
 .about_MIX{ display: flex;flex-direction:column-reverse;}
 .recruit_fl{width: 100%;}
 
@@ -157,7 +165,7 @@
 .about_img{width: 100%;}
 .about_zi img{margin-left: 0;width: 100%;}
 
-.zi_right h3{padding-top: 10px;padding-bottom: 0;}
+.zi_right h3,.burn_top h3,.csd_detailes_top h3{padding: 3.75% 0 2.5% 2%!important;}
 
 .recruit_rl_top{height: 48px;}
 .recruit_rl_top>div{width: 50%;text-align: center;}
@@ -216,7 +224,7 @@
 .xm-ctext2{margin-top: 60px;}
 .xm-ctbox1{width: 100%;}
 .xm-ctbox2{width: 100%;float: none;display: block;overflow-y: scroll;}
-
+}
 
 @media (max-width: 480px) {
 .home_news .news_com .n_left .imgd .ri i {font-size: 20px;height: 25px;line-height: 25px;}

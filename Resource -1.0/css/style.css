@@ -26,7 +26,8 @@ input , textarea , select{font-family:"Microsoft Yahei"; font-size:14px;}
 .curbar a{color: #121212;}
 
 .mo_bread{display: none;}
-
+.mo_curbar a{color: #333333;}
+.mo_curbar a:hover{color: #17417b;}
 /*重置样式*/
 .logo_mo{display: none;}
 /*-phone-nav-*/
@@ -329,13 +330,21 @@ input , textarea , select{font-family:"Microsoft Yahei"; font-size:14px;}
 /*footer*/
 #footer_mo{width: 100%;background: #0055aa;display: none;}
 .footer_mobile{width: 100%;padding: 0 30px;}
-.footer_mobile h2{width: 100%;height: 148px;color: #fff;font-size: 36px;padding-top: 73px;border-bottom: 1px solid #fff;margin-bottom: 30px;}
+.footer_mobile h2{font-weight: 500;
+    color: #fefefe;
+    padding-top: 9.3%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5.1%;
+    margin-bottom: 7.1%;
+    }
 .footer_mo_fl,.footer_mo_rl{width: 49%;display: inline-block;}
 .footer_mo_fl li a,.footer_mo_rl li a{font-size: 20px;color: #bbc7d3;}
-.footer_mo_fl li,.footer_mo_rl li{margin-bottom: 32px;}
-.contact{text-align: center;padding-bottom: 100px;}
-.contact p:nth-of-type(1){font-size: 40px;color: #bbc7d3;margin-bottom: 20px;}
-.contact p:nth-of-type(2){font-size: 18px;color: #bbc7d3;margin-bottom: 20px;}
+.footer_mo_fl li,.footer_mo_rl li{margin-bottom: 24px;}
+.contact{text-align: center;padding-bottom: 100px;clear: both;padding-top: 10.5%;}
+.contact p:nth-of-type(1){font-size: 42px;color: #bbc7d3;margin-bottom: 20px;}
+.contact p:nth-of-type(2){font-size: 20px;color: #bbc7d3;margin-bottom: 20px;}
+.contact a img{width: 7%;margin-right: 4%;}
+.contact a:last-child img{margin-right:0;}
 .footer_mo_adress{background: #004488;width: 100%;}
-.footer_mo_adress div{width: 100%;padding: 0 30px;}
-.footer_mo_adress div p{font-size: 18px;color: #bbc7d3;}
+.footer_mo_adress div{width: 100%;}
+.footer_mo_adress div p{font-size: 18px;color: #bbc7d3;padding: 28px 30px;line-height: 30px;}

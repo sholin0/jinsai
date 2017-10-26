@@ -184,7 +184,7 @@
 
 .Cam_Rec{width: 100%;margin-bottom: 88px;}
 .Cam_Rec_list{width: 100%;margin: auto;}
-.Cam_Rec_list a{float: left;width: 23.1%;margin-right: 2.5%;text-align: center;}
+.Cam_Rec_list a{float: left;width: 23.1%;margin-right: 2.5%;text-align: center;display: block;}
 .Cam_Rec_list a:nth-child(4n){margin-right: 0;background: #4b4f99;}
 .Cam_Rec_list a img{padding-top: 67px;}
 .Cam_Rec_list a p{padding:36px 0;margin-bottom: 10px;font-size: 24px;color: #fff;}
@@ -203,11 +203,11 @@
 .query_list dd{line-height: 24px;color: #8b8b8b;}
 
 .csd_detailes{}
-.csd_detailes .csd_detailes_top{}
-.csd_detailes_top h3{width: 100%;color: #183e7a;font-size: 16px;line-height: 60px;border-bottom: 1px solid #dfdfdf;}
+.csd_detailes .csd_detailes_top{border-bottom: 1px solid #dfdfdf;width: 100%;}
+.csd_detailes_top h3{color: #183e7a;font-size: 16px;padding-bottom: 2.5%;}
 
 
-.csd_detailes_co{width: 100%;}
+.csd_detailes_co{width: 100%;float: left;}
 .csd_detailes_co dl{background: #f5f5f5;margin: 26px 0;}
 .csd_detailes_co dt{margin-bottom: 10px;padding-left: 20px;padding-right: 12px;width: 100%;line-height: 34px;padding-top: 10px;border-bottom:1px dashed #e0e0e0;}
 .csd_detailes_co dt strong{color:#2e2e2e;}
@@ -376,7 +376,7 @@ background-position: right;
 .r-container-text>div{width: 100%;margin-top: 40px;}
 .r-container-text>div>img{width: 100%;}
 .r-container-text>p>strong{color: #737373;}
-/*//人才招聘详情页*/
+/*人才招聘详情页*/
 .zpxx-container{max-width: 1180px;margin: auto;}
 .zpxx-ctext1{width: 100%;border: 1px solid #e5e5e5;padding-top: 30px;padding-bottom: 27px;}
 .ztbox1{width: 90%;margin-left: 30px;}
@@ -390,7 +390,7 @@ background-position: right;
 .one{margin-top: 22px;}
 .two{margin-top: 30px;}
 .zpxx-ctext3{width: 100%;margin-top: 40px;margin-bottom: 60px;}
-.ct3box{width: 80%;margin: auto;
+.ct3box{width: 80%;margin: auto;}
 .ct3box a {width: 20%;font-size: 14px;height: 40px;line-height: 40px;color: white;background: #0055aa;text-align: center;margin-left: 4%;display: inline-block;}
 /*宣讲行程*/
 .x-container{width: 100%;padding-bottom: 75px;}
@@ -407,19 +407,7 @@ background-position: right;
 .xz-ctext1{width: 100%;}
 .xz-ctext1 select{width: 20%;height: 50px;border: 1px solid #0055aa;border-radius: 4px;margin-left: 2.0%;}
 .xz-ctext1 select:first-child{margin-left: 0px;}
-select {
-	/*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-	border: solid 1px #000;
-	/*很关键：将默认的select选择框样式清除*/
-	/*appearance:none;
--moz-appearance:none;
-/*将背景改为红色*/
-	background: white;
-	/*加padding防止文字覆盖*/
-	padding-right: 14px;
-}
-/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-/*select::-ms-expand { display: none; }*/
+select {border: solid 1px #000;background: white;padding-right: 14px;}
 .xz-a1{width: 10%;height: 50px;line-height: 50px;text-align: center;color: white;font-size: 14px;float: right;display: block;background: #3f51b5;border-radius: 2px;}
 .xz-a1:hover{color: white;}
 .xz-ctext2{width: 100%;margin-top: 20px;background: #f6f6f6;padding-bottom: 15px;padding-top: 15px;}
