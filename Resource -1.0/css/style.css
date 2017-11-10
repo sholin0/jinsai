@@ -4,7 +4,7 @@ body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,select{margin:0; paddi
 li{list-style:none;}
 img,fieldset{border:0;max-width: 100%; }
 i{font-style: normal;}
-a{text-decoration:none;}
+a{text-decoration:none;outline:none;}
 a:link {text-decoration: none;}   
 a:visited {text-decoration: none;}   
 a:hover {color: #1b3f7b;text-decoration: none;} 
@@ -13,6 +13,7 @@ body{font-family:"微软雅黑";overflow-x: hidden; min-width: 320px;}
 input,a{outline:none;}
 table{border-collapse:collapse;}
 input , textarea , select{font-family:"Microsoft Yahei"; font-size:14px;}
+img { -ms-interpolation-mode: bicubic; }
 .img-responsive{width: 100%;}
 .fl{float: left;_display:inline}
 .rl{float: right;_display:inline}
@@ -28,6 +29,9 @@ input , textarea , select{font-family:"Microsoft Yahei"; font-size:14px;}
 .mo_bread{display: none;}
 .mo_curbar a{color: #333333;}
 .mo_curbar a:hover{color: #17417b;}
+
+
+.zi_left ol,.zi_left ol .side_dta{display: none;}
 /*重置样式*/
 .logo_mo{display: none;}
 /*-phone-nav-*/
@@ -133,12 +137,13 @@ input , textarea , select{font-family:"Microsoft Yahei"; font-size:14px;}
 .zi_com .zi_left .top .span1 {font-size: 30px;padding-top: 20px;line-height: 60px;}
 .zi_com .zi_left .top .span2 {padding-bottom: 22px;}
 .zi_com .zi_left ul {background: #f5f5f5;padding-top: 22px;}
-.zi_com .zi_left ul>li{width: 100%;}
+.zi_com .zi_left ul>li{width: 100%; clear: both;}
 .zi_com .zi_left ul li ol>li{width: 100%;}
-.zi_com .zi_left ul li ol>li>a{border-top: 1px solid #93b5d7;padding-top: 21px;padding-bottom: 20px;float: left;width: 100%;padding-left: 87px;background: url(../images/sild_fl.png)no-repeat 62px 23px;color: #3d3d3d;}
+.zi_com .zi_left ul li ol>li>a{display: block;border-top: 1px solid #93b5d7;padding-top: 21px;padding-bottom: 20px;float: left;width: 100%;padding-left: 87px;background: url(../images/sild_fl.png)no-repeat 62px 23px;color: #3d3d3d;}
 .zi_com .zi_left ul>li>a {color: #2a2a2a;;border-top: 1px solid #93b5d7;display: block;overflow: hidden;background: url(../images/side_act.png)no-repeat 40px;padding-left: 56px ;line-height: 60px;}
 .zi_com .zi_left ul>li a:hover { color: #1d68b3;}
-.zi_left ul ol{width: 100%;float: left;background: #f5f5f5;}
+.zi_left ul ol{width: 100%;float: left;background: #f5f5f5;display: none;}
+.zi_com .zi_left ul li ol>li div{clear: both;}
 .zi_left ul ol div a{
 	border-top: 1px solid #93b5d7;
 	padding-top: 21px;

@@ -32,7 +32,6 @@
 	/*.home_news .news_com .n_right{width: 768px;}*/
 	.home_news .news_com .n_right ul li .ri{width: 80px;height: 80px;margin-left: 6%;}
 	.n_left_co{width: 90%;}
-	.n_right_co{width: 26.3%;}
 	.news_tabs{margin-left: 6%;}
 	.home_news .news_com .n_right ul li .ri time{line-height: 40px;}
 	.home_news .news_com .n_right{height: 794px;}
@@ -45,6 +44,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
+	.footer_co{width: 750px;}
 	.container{width: 750px;}
 	.phone-nav {margin-top: 30px;}
 	.class_list{width: 100%;}

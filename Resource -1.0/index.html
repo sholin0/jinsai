@@ -58,7 +58,7 @@
 				</div>
 	
 				<div class="n_right wow bounceInRight">
-					<div class="n_right_co">
+					<div class="n_right_co"><!--addstyle-->
 					<div class="news_tabs">
 						<ol>
 							<li class="active"><a class="tabsActive active wow bounceInDown bg-green animated" data-wow-delay="1s" href="javascrpt:">金赛速递</a></li>
@@ -66,7 +66,8 @@
 							<li><a class="wow bounceInDown bg-green animated" data-wow-delay="1.5s" href="javascrpt:">媒体报道</a></li>
 						</ol>
 					</div>
-					<div>
+					
+					<div class="n_right_list"><!--addstyle-->
 						<ul>
 						<li class="clearfix">
 							<a href="news.html">
@@ -87,8 +88,8 @@
 								<time>2016-02</time>
 							</span>
 							<div class="wen_nei">
-								<h4>但是发现效果都不好，不是大家没兴趣听下去，就是我讲的逻辑跳跃。所以今天先给大家带来一张图，有些戏谑的元素你觉得微博现在还有用吗?我和我的同事们现在都不怎么玩微博了!</h4>
-								<p>诚然，但是发现效果都不好，不是大家没兴趣听下去，就是我讲的逻辑跳跃。所以今天先给大家带来一张图，有些戏谑的元素相比当前如日中天的微信，风生水起的直播APP，微博似乎已经英雄迟暮，渐渐淡出了甲方市场部的视线，甚至于要感谢能提出此类问题的人的尊重了...</p>
+								<h4>你觉得微博现在还有用吗?我和我的同事们现在都不怎么玩微博了!</h4>
+								<p>诚但是发现效果都不好，不是大家没兴趣听下去，就是我讲的逻辑跳跃。所以今天先给大家带来一张图，有些戏谑的元素然，相比当前如日中天的微信，风生水起的直播APP，微博似乎已经英雄迟暮，渐渐淡出了甲方市场部的视线，甚至于要感谢能提出此类问题的人的尊重了...</p>
 							</div>
 							</a>
 						</li>
@@ -487,7 +488,9 @@
 			jQuery(".slideGroup .slideBox").slide({ mainCell:"ul",vis:4,prevCell:".sPrev",nextCell:".sNext",effect:"leftMarquee",interTime:50,autoPlay:true,trigger:"click"});
 			jQuery(".slideGroup").slide({titCell:".Common_tabs li",mainCell:".parBd"}); 
 			$('.n_right_co ul:first-child').show().siblings().hide()
-			$('.news_tabs li').click(function(){$('.n_right_co ul').eq($(this).index()).fadeIn().siblings().fadeOut();})
+			$('.news_tabs li').click(function(){
+				$('.n_right_co ul').eq($(this).index()).show().siblings().hide();}
+			)
 	    });
 </script>
 <script>

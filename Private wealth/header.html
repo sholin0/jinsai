@@ -1,0 +1,134 @@
+<!--修改密码-->
+<div class="show-time">
+	<div class="show">
+		<span>密码修改</span>
+	<form action="" method="post">
+		<div class="form">
+
+			<div class="form1">
+				<a>原密码：</a><input type="text" name="" id="" value="" /></div>
+			<div class="form1">
+				<a>新密码：</a><input type="text" name="" id="inp1" value="" placeholder="请输入6~20位密码" /></div>
+			<div class="form1">
+				<a>确认密码：</a><input type="text" name="" id="inp2" value="" placeholder="请再次输入密码" />
+				<div class="show3">
+					<div class="show3-text1">请输入密码</div>
+					<div class="show3-text2">请输入相同的密码</div>
+				</div>
+			</div>
+		</div>
+		<input class="en" type="submit" value="确定"/>
+	</form>
+		<div class="x"><img src="images/s-x_03.png" /></div>
+	</div>
+</div>
+<!--修改密码-->
+<div id="contain">
+	<!--头部-->
+
+	<div class="header">
+		<div class="headerMain">
+			<div class="privateWealth" id="privateWealth">
+				<div class="privateWeath_font">
+					<a href="#">星财富</a>
+				</div>
+			</div>
+			<div class="headerLogo">
+				<div class="headerLogo_left">
+					<img src="images/header/logo.jpg" />
+				</div>
+				<div class="headerLogo_right">
+					<ul>
+						<li>
+							<dl>
+								<dt><img src="images/header/telphone.jpg" /></dt>
+								<dd>
+									<p>全国统一客服热线</p>
+									<p>400-886-7799</p>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><img src="images/header/user.jpg" /></dt>
+								<dd>
+									<p>田晨：41088119820629154X</p>
+									<p class="Sign_out">
+										<a href="#" class="dj">修改密码</a>
+										<a href="3">退出</a>
+									</p>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="main_banner">
+			<div class="banner_header">
+				<ul>
+					<li>
+						<a class="active" href="my_fund.html">我的基金</a>
+					</li>
+					<li>
+						<a href="History.html">交易记录</a>
+					</li>
+					<li>
+						<a href="Personal_information.html">个人信息</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.goup({
+			trigger: 100,
+			bottomOffset: 20,
+			locationOffset: 20,
+			titleAsText: true
+		});
+    $(".banner_header a").each(function(){  
+        $this = $(this);  
+        if($this[0].href==String(window.location)){ 
+        	$(".banner_header a").removeClass('active')
+            $this.addClass("active");  
+        } 
+    });
+    //密码弹窗
+	$(".dj").click(function() {
+
+		$(".show-time").addClass("xs");
+
+	})
+	$(".x").click(function() {
+		$(".show-time").removeClass("xs");
+	})
+	$(".en").click(function() {
+		if(!inp1.value || !inp2.value) {
+			$(".show3-text1").css("display", "block");
+			return false;
+		} else if(inp1.value !== inp2.value) {
+			$(".show3-text2").css("display", "block");
+		}
+
+	})
+	$("#inp1").change(function() {
+		$(".show3-text1").css("display", "none");
+		$(".show3-text2").css("display", "none");
+
+	})
+	$("#inp2").change(function() {
+		$(".show3-text1").css("display", "none");
+		$(".show3-text2").css("display", "none");
+
+	});
+	});
+</script>
+<script type="text/javascript" src="js/move.js"></script>

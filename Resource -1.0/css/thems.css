@@ -15,7 +15,7 @@
 
 .vision{width: 100%;}
 .vision .list_vision{width: 100%;height: auto;position: relative;}
-.vision .vision_p{position: absolute;left: 0;top: 100px;width: 762px;height: 100px;background: url(../images/thems/banbg.png)no-repeat;}
+.vision .vision_p{position: absolute;left: 0;top: 100px;width: 762px;height: 100px;background: url(../images/thems/banbg.jpg)no-repeat;z-index: 999;}
 .vision .vision_p p{padding-left: 30px;line-height: 29px;margin-top: 20px;color: #fff;}
 .vision .vision_img{position: absolute;right: 0;top: 49px;}
 .vision .vision_oath{position: absolute;left: 30px;top: 230px;}
@@ -267,10 +267,10 @@ background-position: right;
 .tab_co .tab a:hover{ background:#0055aa; color:#e5edf6;}
 .tab_co .tab a.on{ background:#0055aa; color:#e5edf6;}
 .tab_co .content{ overflow:hidden;margin-bottom: 19px;margin-top: 30px;}
-.tab_co .content li{float:left;}
+.tab_co .content li{float:left;display: none;}
 .tab_co .content li p{line-height: 24px;color: #848484;}
 .tab_co .content_img{ overflow:hidden; min-height:508px;}
-.tab_co .content_img li{float:left;text-align: center;}
+.tab_co .content_img li{float:left;text-align: center;display: none;width: 100%;}
 
 /*人才发展*/
 .r-container {width: 100%;}

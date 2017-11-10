@@ -3,7 +3,10 @@
 .n_left p{color: #777;line-height: 28px;}
 .n_left_co{width: 520px;}
 .n_right{position: absolute;left: 50%;background: #f1f3f3;}
-.n_right_co{width: 36.5%;}
+/*add*/
+.n_right_list{width: 62%;}
+/*add*/
+/*.n_right_co{width: 36.5%;}*/
 
 .news_tabs{margin-bottom: 20px;margin-left: 10%;margin-top: 80px;}
 .news_tabs ol{height: 42px;}

@@ -88,7 +88,47 @@ $(function() {
 			$(this).addClass("active").siblings("li").removeClass("active");
 		},function(){
 		
-		})
-
+		});
+		
+		/*侧边栏*/
+		$(".zi_left>ul>li>a").click(function(e){
+			e.preventDefault();
+			if($(this).siblings().is('ol')){
+				 $(this).toggleClass("state").parents().siblings().find("a").removeClass("state");
+				 $(this).parents().siblings().find("ol").hide(300);
+				 $(this).siblings("ol").toggle(300);
+				 $(this).parents().siblings().find("ol>li>.side_dta").hide()
+				 $(".zi_left ol>li>a").removeClass("ch_active")
+			}/*else{
+				$(this).addClass("sy").parents().siblings().find("a").removeClass("sy");
+			}*/
+	});
 	
+    $(".zi_left ol>li>a").click(function(e){
+    	e.preventDefault();
+    	if($(this).siblings().is('.side_dta')){
+    		$(this).toggleClass("ch_active").parents().siblings().find("a").removeClass("ch_active");
+	        $(this).parents().siblings().find(".side_dta").hide(300);	
+		    $(this).siblings(".side_dta").toggle(300);	
+    	}/*else{
+				$(this).addClass("bg_active").parents().siblings().find("a").removeClass("bg_active");
+			}*/
+       
+	});
+
+	$(".zi_left ul a").each(function(){  
+	        	$this = $(this); 
+	        if($this[0].href!==String(window.location)){
+	        	console.log($this.parents())
+	        	if($this.parents().length!==0){
+	        		$this.parents().show()
+	        		/*$(".zi_left ul ol").show().parent().siblings().children('ol').hide()*/
+	        	}
+	        		$this.parents().show().siblings('a').addClass('state')
+			        $this.parents('li').siblings().find('ol').hide().siblings('a').removeClass('state')
+			        
+	        }
+	   }); 
+    /*侧边栏*/
+	    
 });    
