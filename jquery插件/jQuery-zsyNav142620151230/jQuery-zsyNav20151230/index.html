@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery自适应窗口大小导航菜单</title>
+
+<!--必要样式-->
+<link rel="stylesheet" href="css/pgwmenu.css">
+
+<style>
+h1 { padding: 30px 0; font: 32px "Microsoft Yahei"; text-align: center;}
+h2 { margin-top: 50px; font: 24px "Microsoft Yahei";}
+body { font-size: 14px;}
+.dowebok-explain { margin-top: 20px; font-size: 14px; text-align: center; color: #f50;}
+
+.pgwMenu a { padding: 0 30px;}
+
+/* 自定义样式 */
+.pgwMenuCustom {FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#3ba0fa,endColorStr=#1070c8); /*IE 6 7 8*/ 
+background: -ms-linear-gradient(top, #3ba0fa,  #1070c8);        /* IE 10 */
+background:-moz-linear-gradient(top,#3ba0fa,#1070c8);/*火狐*/ 
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#3ba0fa), to(#1070c8));/*谷歌*/ 
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3ba0fa), to(#1070c8));      /* Safari 4-5, Chrome 1-9*/
+background: -webkit-linear-gradient(top, #3ba0fa, #1070c8);   /*Safari5.1 Chrome 10+*/
+background: -o-linear-gradient(top, #3ba0fa, #1070c8);  /*Opera 11.10+*/
+height: 40px; position: relative; list-style: none }
+.pgwMenuCustom ul { list-style: none; white-space: nowrap; margin: 0; padding: 0 }
+.pgwMenuCustom .pm-links.mobile, .pgwMenuCustom .pm-viewMore>ul { background: #f1941c; box-shadow: 2px 2px 4px #777; position: absolute; left: 0; top: 100%; z-index: 1000 }
+.pgwMenuCustom .pm-links.mobile li, .pgwMenuCustom .pm-viewMore>ul>li { display: block; clear: both; width: 175px }
+.pgwMenuCustom li { float: left }
+.pgwMenuCustom a { display: block; color: #fff; line-height: 40px; padding: 0 30px; text-decoration: none }
+.pgwMenuCustom a.selected { background: #e5601d }
+.pgwMenuCustom li a:hover { background: #e86f2e; text-decoration: none }
+.pgwMenuCustom .pm-dropDown, .pgwMenuCustom .pm-viewMore, .pgwMenuCustom .pm-viewMore>ul { display: none }
+.pgwMenuCustom .pm-dropDown a { display: inline-block; background: #e86f2e }
+.pgwMenuCustom .pm-dropDown a.active, .pgwMenuCustom .pm-viewMore a.active { background: #e5601d }
+.pgwMenuCustom .pm-dropDown span.icon, .pgwMenuCustom .pm-dropDown span.black { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAABZ0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMDvo9WkAAABpSURBVEhL7ZPLCcAwDEM9jefI/ks1Hyj2QbiGSLcKHggl8sEktjTc/WGyZxo6YKAbrFzFoav3/hdhmsrlijBN5XJFmKZyuSJMU7lcsfV/kIN0FRJgyACGDGDIAIYMpK8CHt6iG6xZhY0JIJ+6AHGbUFsAAAAASUVORK5CYII=) no-repeat; display: block; height: 22px; width: 22px; margin: 9px 5px }
+.pgwMenuCustom .pm-dropDown span.white { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABZ0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMDvo9WkAAABKSURBVEhL7ZOxDQAwCMN6O4/T0tmjsxHJDB4yROJ0dz3s1BRHEi2OTREBpQFKA5QGKA3m7IP8RKeIgNIApQFKA5QGc/ZBfkJTdF0oUafLBAFNbAAAAABJRU5ErkJggg==) no-repeat; display: block; height: 22px; width: 22px; margin: 9px 5px }
+.pgwMenuCustom .pm-viewMore { display: none; position: relative }
+.pgwMenuCustom .pm-viewMore>a { display: inline-block }
+.pgwMenuCustom .pm-viewMore>ul { left: auto; right: 0 }
+.pgwMenuCustom .pm-viewMore li { float: none }
+.pgwMenuCustom .pm-viewMore span.icon, .pgwMenuCustom .pm-viewMore span.white { border-color: #fff transparent; border-style: solid; border-width: 8px 6px 0; margin-left: 3px; display: inline-block }
+.pgwMenuCustom .pm-viewMore span.black { border-color: #000 transparent; border-style: solid; border-width: 8px 6px 0; margin-left: 3px; display: inline-block }
+
+.mainlevel ul{ display:none; position:absolute;}
+.mainlevel li{border-top:1px solid #fff;width:140px; float:none;
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#3ba0fa,endColorStr=#1070c8); /*IE 6 7 8*/ 
+background: -ms-linear-gradient(top, #3ba0fa,  #1070c8);        /* IE 10 */
+background:-moz-linear-gradient(top,#3ba0fa,#1070c8);/*火狐*/ 
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#3ba0fa), to(#1070c8));/*谷歌*/ 
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3ba0fa), to(#1070c8));      /* Safari 4-5, Chrome 1-9*/
+background: -webkit-linear-gradient(top, #3ba0fa, #1070c8);   /*Safari5.1 Chrome 10+*/
+background: -o-linear-gradient(top, #3ba0fa, #1070c8);  }
+</style>
+</head>
+
+<body>
+<ul class="pgwMenu">
+	<li><a class="selected" href="#">首页</a></li>
+	<li><a href="#">代码</a></li>
+	<li><a href="#">素材</a></li>
+	<li><a href="#">模板</a></li>
+
+	<li><a href="javascript:">关于</a></li>
+	<li><a href="javascript:">服务</a></li>
+	<li><a href="#">联系</a></li>
+</ul>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/pgwmenu.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('.pgwMenu').pgwMenu({
+		dropDownLabel: '菜单',
+		viewMoreLabel: '更多<span class="icon"></span>'
+	});
+
+	$('.pgwMenuCustom').pgwMenu({
+		mainClassName: 'pgwMenuCustom',
+		dropDownLabel: '菜单',
+		viewMoreLabel: '更多<span class="icon"></span>'
+	});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".pgwMenuCustom li").hover(function(){
+		$(this).find("ul").slideDown("slow");	
+	},function(){
+		$(this).find("ul").slideUp("fast");	
+	});
+});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>

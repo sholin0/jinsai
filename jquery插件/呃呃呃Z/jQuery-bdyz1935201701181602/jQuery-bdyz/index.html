@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单自动验证插件</title>
+</head>
+<body>
+<!--notNull regex ajax equalTo rangeLength-->
+<form method="post" id="form1">
+  <div> 用户名:
+    <input type="text" name="userName" validate='[{"type":"notNull","msg":"用户名不能为空！"},{"type":"regex","reg":"^[a-zA-Z]{1}[a-zA-Z0-9]{2,9}$","msg":"用户名必须是字母开头并且不能少于3位不能多余10位"}]'/>
+  </div>
+  <div> 密码:
+    <input type="password" name="password" validate = '[{"type":"notNull","msg":"密码不能为空！"}]' id="password"/>
+	<p></p>
+  </div>
+  <div> 确认密码:
+    <input type="password" validate='[{"type":"notNull","msg":"确认密码不能为空！"},{"type":"equalTo","target":"#password","msg":"确认密码不一致"}]' name="confirmPassword" />
+  </div>
+  <div> 邮箱:
+    <input type="text" name="email" validate='[{"type":"regex","reg":"^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+$","msg":"邮箱不符合规范!"}]' />
+  </div>
+  <div> 手机号码:
+    <input type="text" name="phone" validate='[{"type":"regex","reg":"^(1+[34578][0-9]{9})$","msg":"手机号码不符合规范!"}]' />
+  </div>
+  <input type="submit" >
+</form>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="jquery.validate.js"></script> 
+<script type="text/javascript">
+    $(function(){
+        $("#form1").validate();
+    });
+</script>
+</body>
+</html>

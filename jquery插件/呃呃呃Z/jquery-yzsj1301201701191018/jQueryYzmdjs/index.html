@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取手机验证码按钮计时</title>
+	<style type="text/css">
+		body,div{
+			padding: 0;
+			margin: 0;
+		}
+		.wraper{
+			padding: 100px;
+		}
+		.phone{
+			width: 220px;
+			height: 40px;
+			box-sizing: border-box;
+			outline: none;
+			padding: 0 10px;
+		}
+		.getverify-code-btn{
+			display: inline-block;
+			width: 140px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: blue;
+			border: 1px solid #ccc;
+			box-sizing: border-box;	
+			vertical-align: middle;
+			cursor: pointer;
+			color: #fff; 
+		}
+		.unlabed{
+			background-color: lightblue;
+			color: #eee;
+		}
+	</style>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="getVerifyCode.js"></script>
+	<script type="text/javascript">
+		$(function (){
+			//获取手机验证码
+			$("#j_getVerifyCode").on("click",getVerifyCode({
+				callBack: function (){//按钮点击后的回调函数，-----必须-----
+					//在这里你还是可以对你的按钮进行操作
+					//console.log(this);
+					alert("验证码发送成功");
+				},
+				time: 60,//定时时间，以秒为单位，默认60秒
+				getCurrentTime: function (time){//获取倒计时当前时间
+					//console.log(time);
+					//console.log(this);//这里的这个this执行按钮
+					//console.log("=================================");
+				},
+				isPhone: true,//是否为发送手机验证码，如果是则会验证手机号格式，-----必须-----
+				getPhone: function (){//获取手机号，此处一定要return
+					return $("#j_phone").val();
+				},
+				//phoneReg: /^1[34578]\d{9}$/,//手机号验证正则
+				phoneCallBack: function (){//当手机号有误时的回调，默认会中止操作
+					alert("您输入的手机号有误");
+				},
+				timeIsUpText: "重新发送",//倒计时时间到了后按钮所显示文字
+				timeRunnigText: "s后重新发送",//倒计时时间正在走的时候按钮所显示文字。默认为"xxs后重新获取"
+				unabledClass: "unlabed"//按钮不能用的样式，即点击按钮后的样式
+			}));
+			
+			
+
+			//获取普通验证码
+			$("#j_timekeeping").on("click",getVerifyCode({
+				callBack: function (){//按钮点击后的回调函数，-----必须-----
+					//在这里你还是可以对你的按钮进行操作
+					console.log(this);
+					alert("验证码发送成功");
+				},
+				time: 20,//定时时间，以秒为单位
+				unabledClass: "unlabed"//按钮不能用的样式，即点击按钮后的样式
+			}));
+		});
+	</script>
+</head>
+<body>
+
+	<div class="wraper">
+		<h1>获取手机验证码</h1>
+		<input type="text" id="j_phone" class="phone">
+		<div id="j_getVerifyCode" class="getverify-code-btn">获取手机验证码</div>
+	</div>
+
+	<div class="wraper">
+		<h1>获取普通验证码</h1>
+		<div id="j_timekeeping" class="getverify-code-btn">获取验证码</div>
+	</div>
+</body>
+</html>

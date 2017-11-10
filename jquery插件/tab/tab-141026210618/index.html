@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<title>Tab+无缝滚动组合</title>
+
+<script src="http://www.jq22.com/jquery/1.6.4/jquery.min.js">
+
+</script><script type="text/javascript" src="jquery.SuperSlide.2.1.1.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+		<style type="text/css">
+
+		/* css 重置 */
+
+		*{margin:0; padding:0; list-style:none; }
+
+		body{ background:#fff; font:normal 12px/22px 宋体;  }
+
+		img{ border:0;  }
+
+		a{ text-decoration:none; color:#333;  }
+
+		a:hover{ color:#1974A1;  }
+
+		/* 本例子css */
+
+		.slideGroup{ width:510px; border:1px solid #ddd; text-align:left;  }
+
+		.slideGroup .parHd{ height:30px; line-height:30px; background:#f4f4f4; padding:0 20px; border-bottom:1px solid #ddd;  position:relative;  }
+
+		.slideGroup .parHd ul{ float:left; position:absolute; left:20px; top:-1px; height:32px;   }
+
+		.slideGroup .parHd ul li{ float:left; padding:0 15px; cursor:pointer;  }
+
+		.slideGroup .parHd ul li.on{ height:30px;  background:#fff; border:1px solid #ddd; border-bottom:2px solid #fff; }
+
+		.slideGroup .slideBox{ overflow:hidden; zoom:1; padding:10px 0 10px 42px; position:relative;   }
+
+
+
+		.slideGroup .sPrev,.slideGroup .sNext{ position:absolute; left:5px; top:10px; display:block; width:30px; height:94px; border:1px solid #ddd; background:url(images/icoLeft.gif) center center no-repeat #f4f4f4; }
+
+		.slideGroup .sNext{ left:auto; right:5px; background:url(images/icoRight.gif) center center no-repeat #f4f4f4;  }
+
+		.slideGroup .sPrev:hover,.slideGroup .sNext:hover{ border-color:#f60;  }
+
+
+
+		.slideGroup .parBd ul{ overflow:hidden; zoom:1;   }
+
+		.slideGroup .parBd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+
+		.slideGroup .parBd ul li .pic{ text-align:center; }
+
+		.slideGroup .parBd ul li .pic img{ width:120px; height:90px; display:block;  padding:2px; border:1px solid #ccc; }
+
+		.slideGroup .parBd ul li .pic a:hover img{ border-color:#999;  }
+
+		.slideGroup .parBd ul li .title{ line-height:24px;   }
+
+
+
+
+
+		</style>
+
+
+
+
+
+		<div class="slideGroup" style="margin:0 auto">
+
+			<div class="parHd">
+
+				<ul><li>教育</li><li>培训</li><li>出国</li></ul>
+
+			</div>
+
+			<div class="parBd">
+
+
+
+					<div class="slideBox">
+
+						<a class="sPrev" href="javascript:void(0)"></a>
+
+						<ul>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic1.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图1.1</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic1.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图1.2</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic1.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图1.3</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic1.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图1.4</a></div>
+
+							</li>
+
+						</ul>
+
+						<a class="sNext" href="javascript:void(0)"></a>
+
+					</div><!-- slideBox End -->
+
+
+
+					<div class="slideBox">
+
+						<a class="sPrev" href="javascript:void(0)"></a>
+
+						<ul>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic2.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图2.1</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic2.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图2.2</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic2.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图2.3</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic2.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图2.4</a></div>
+
+							</li>
+
+						</ul>
+
+						<a class="sNext" href="javascript:void(0)"></a>
+
+					</div><!-- slideBox End -->
+
+
+
+					<div class="slideBox">
+
+						<a class="sPrev" href="javascript:void(0)"></a>
+
+						<ul>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic3.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图3.1</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic3.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图3.2</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic3.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图3.3</a></div>
+
+							</li>
+
+							<li>
+
+								<div class="pic"><a href="#" target="_blank"><img src="images/pic3.jpg" /></a></div>
+
+								<div class="title"><a href="#" target="_blank">效果图3.4</a></div>
+
+							</li>
+
+						</ul>
+
+						<a class="sNext" href="javascript:void(0)"></a>
+
+					</div><!-- slideBox End -->
+
+
+
+			</div><!-- parBd End -->
+
+		</div>
+
+
+
+		<script type="text/javascript">
+
+			/*
+
+			/* 内层图片无缝滚动 */
+
+			jQuery(".slideGroup .slideBox").slide({ mainCell:"ul",vis:3,prevCell:".sPrev",nextCell:".sNext",effect:"leftMarquee",interTime:50,autoPlay:true,trigger:"click"});
+
+			/* 外层tab切换 */
+
+			jQuery(".slideGroup").slide({titCell:".parHd li",mainCell:".parBd"});
+
+		</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+

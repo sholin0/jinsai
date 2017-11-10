@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生js带提示留言表单验证代码 - xw素材网</title>
+<script type="text/javascript" src="js.js"></script>
+<link rel="stylesheet" type="text/css" href="Guestbook.css"/>
+</head>
+<body>
+<div class="mail">
+	<div class="send">
+		<div class="sendbox">
+         <form action="#" method="get" class="messages">
+		     <div class="messlist">
+			      <label>姓名</label>
+			      <input type="text" placeholder="姓名" id="input1" onblur="jieshou()">
+						<div id ="label0">*你还没填写名字呢!</div>
+						<div id ="label1">√正确</div>
+						<div id ="label2">×错误</div>
+			      <div class="clears"></div>
+		     </div>
+		     <div class="messlist">
+			      <label>电子邮件</label>
+			      <input type="text" placeholder="电子邮件" id="input2" onblur="mailtext()">
+							<div id ="label3">√正确</div>
+							<div id ="label4">×邮箱地址错误</div>
+							<div id ="label5">*必填</div>
+			      <div class="clears"></div>
+		     </div>
+		     <div class="messlist">
+			      <label>手机号</label>
+			      <input type="text" placeholder="手机号" id="input3" onblur="phonetext()">
+								<div id ="label6">√正确</div>
+								<div id ="label7">×手机号码错误</div>
+			      <div class="clears"></div>
+		     </div>
+		     <div class="messlist textareas">
+			      <label>留言内容</label>
+			      <textarea placeholder="说点什么吧..." id="input4" onblur="content()"></textarea>
+								<div id ="label8">√</div>
+								<div id ="label9">×</div>
+								<div id ="label10">* 必填</div>
+			      <div class="clears"></div>
+		     </div>
+		     <div class="messlist yzms">
+			      <label>验证码</label>
+			      <input type="text" placeholder="验证码" id="input5" />
+			      <img src="images/yzm.jpg" width="64" height="27" class="yzmimg" />
+			      <div class="clears"></div>
+			     </div>
+		     <div class="messsub">
+			      <input type="submit" value="提交" onclick="send()"style="background:#00a3eb;color:#fff;" />
+			      <input type="reset" value="重填" />
+		     </div>
+		</form>	 
+
+</div>
+  </div>
+</div>
+
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+<body>
+<html>

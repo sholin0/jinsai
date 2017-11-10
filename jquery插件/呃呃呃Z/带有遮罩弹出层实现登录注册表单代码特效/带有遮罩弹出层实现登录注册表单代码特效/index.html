@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>带有遮罩弹出层实现登录注册表单代码特效_js代码网</title>
+<meta name="keywords" content="弹出层实现登录注册表单" />
+<meta name="description" content="jquery modal dialog对话框窗口插件制作遮罩弹出层登录注册表单代码。" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<a class="btn01" data-toggle="modal" href="#login-modal">登录</a>
+<a class="btn02" data-toggle="modal" href="#signup-modal">注册</a>
+
+
+
+
+<div class="modal" id="login-modal">
+	<a class="close" data-dismiss="modal">×</a>
+	<h1>登录</h1>
+	<ul class="login-bind-tp">
+		<li class="qweibo"> <a href="http://www.jsdaima.com"><em>&nbsp;</em> QQ登录</a> </li>
+		<li class="sina"> <a href="http://www.jsdaima.com"><em>&nbsp;</em> 微博登录</a> </li>
+		<li class="douban"> <a href="http://www.jsdaima.com"><em>&nbsp;</em> 豆瓣登录</a> </li>
+	</ul>
+	<p>或者使用已有帐号登陆：</p>
+	<form class="login-form clearfix" method="post" action="http://www.jsdaima.com">
+		<div class="form-arrow"></div>
+		<input name="email" type="text" placeholder="邮箱：">
+		<input name="password" type="password" placeholder="密码：">
+		<input type="submit" name="type" class="button-blue login" value="登录">
+		<input type="hidden" name="return-url" value="">
+		<div class="clearfix"></div>
+		<label class="remember"><input name="remember" type="checkbox" checked/>下次自动登录 </label>
+		<a class="forgot">忘记密码？</a>
+		<ul class="third-parties">
+			<li><p>新浪微博帐号</p></li>
+			<li><p>腾讯微博帐号</p></li>
+			<li><p>豆瓣帐号</p></li>
+			<li><p></p></li>
+		</ul>
+	</form>
+</div>
+
+
+<div class="modal" id="signup-modal">
+	<a class="close" data-dismiss="modal">×</a>
+	<h1>注册</h1>
+	<ul class="login-bind-tp">
+		<li class="qweibo"> <a href="http://www.jsdaima.com"><em>&nbsp;</em> QQ登录</a> </li>
+		<li class="sina"> <a href="http://www.jsdaima.com"><em>&nbsp;</em> 微博登录</a> </li>
+		<li class="douban"> <a href="http://www.jsdaima.com"><em>&nbsp;</em> 豆瓣登录</a> </li>
+	</ul>
+	<p>或者使用邮箱注册：</p>
+	<form class="signup-form clearfix" method="post" action="http://www.jsdaima.com">
+		<p class="error"></p>
+		<input name="email" type="text" placeholder="邮箱：">
+		<input name="password" type="password" placeholder="密码：">
+		<input name="password1" type="password" placeholder="确认密码：">
+		<input name="username" type="text" placeholder="用户名：">
+		<input type="hidden" name="title" value="">
+		<input type="hidden" name="url" value="">
+		<div class="clearfix"></div>
+		<input type="button" name="type" class="button-blue reg" value="注册" data-action="regist">
+		<ul class="third-parties">
+			<li><p>新浪微博帐号</p></li>
+			<li><p>腾讯微博帐号</p></li>
+			<li><p>豆瓣帐号</p></li>
+		</ul>
+	</form>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<!--代码整理：js代码网 www.jsdaima.com-->

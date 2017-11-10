@@ -1,0 +1,91 @@
+
+.header{border-bottom: none !important;}
+.n_left p{color: #777;line-height: 28px;}
+.n_left_co{width: 520px;}
+.n_right{position: absolute;left: 50%;background: #f1f3f3;}
+.n_right_co{margin-left: 90px;margin-top: 80px;}
+
+.news_tabs{margin-bottom: 20px;}
+.news_tabs ol{height: 42px;}
+.news_tabs li a{padding: 9px 16px;border: 2px solid #1a3f7b ;display: block;}
+.news_tabs li{float: left;margin-right: 22px;color:#1a3f7b;cursor: pointer;}
+.news_tabs li:last-child{margin-right: 0;}
+.n_right ul{display:none;}
+.About_us{margin-top: 80px;margin-bottom: 40px;}
+.About_us h2{font-size: 36px;color: #000;}
+.About_us .en_about{font-family: "times new roman";color: #999;font-size: 24px;}
+/*<!--Product introduction-->*/
+.product{height: 804px;background:url(../images/product/productbg.jpg)no-repeat center;}
+.product_co{height: 804px;margin: 0 auto;}
+.product_top{height: 189px;text-align: center;}
+.top_title{font-size: 36px;color: #fff;padding-top: 56px;font-weight: 500;margin-bottom: 16px;}
+.en_top_title{color: #999;font-weight: 500;font-size: 24px;}
+.product_co ul{height:534px;margin: 0 auto;}
+.product_co ul li{position: relative;float: left;text-align: center;padding: 0;height: 50%;width: 33.333%;}
+.product_co a{height: 276px;position: absolute;display: block;width: 100%;}
+.product_co a img{margin: 42px auto 0;}
+.product_co li .pro_title{font-size: 30px;color: #fff;}
+.product_co li .pro_title_English{color: #fff;font-family: Times New Roman;font-size: 18px}
+.pro_cc{position: absolute;top: 266px;left: 0;}
+.product_co .ood a{left: 0;top: 258px;background: url(../images/product/probg_up.png) no-repeat;}
+.product_co .ood a:hover{background: url(../images/product/prohover_up.png) no-repeat;}
+.product_co .even a{left: 0;background: url(../images/product/probg_down.png) no-repeat;z-index: 1;}
+.product_co .even a:hover{left: 0;background: url(../images/product/prohover_down.png) no-repeat;z-index: 1;}
+/*<!--Product introduction-->*/
+.product_mobile{display: none;}
+.list_mo li{float: left;}
+.list_mo li .pro_mo{width: 50%;display: inline-block;}
+.list_mo li a{width: 50%;display: inline-block;float: right;}
+.list_mo li a img{}
+
+/*Research & Development*/
+.Research_top,.Commonweal_top{height: 189px;text-align: center;}
+.Research_top .top_title,.Commonweal_top .top_title{color: #000;}
+.Clinical_project,.Preclinical_project{height: 590px;position: relative;width: 50%;float: left;}
+.Clinical_project{background:url(../images/product/Preclinicalbg.jpg)no-repeat;background-size: cover;}
+.Preclinical_project{background:url(../images/product/Clinicalbg.jpg)no-repeat;background-size: cover;}
+.Clinical_project_co,.Preclinical_project_co{position: absolute;width:50%;height:50%;background:url(../images/product/Clinical_project_co.png)no-repeat;}
+.Clinical_project_co{left: 0;bottom: 0;}
+.Preclinical_project_co{right: 0;top: 0;}
+p.heng{background: #fff;width: 60px;height: 2px;margin-left: 30px;margin-bottom: 20px;}
+.project{font-size: 30px;color: #fff;margin:84px 0 20px 30px;}
+.en_project{font-size: 18px;color: #fff;margin-left: 30px;}
+.pro{margin-bottom: 30px;}
+.info{position: relative;margin-left: 30px;width: 35px;height: 35px;text-align: center;line-height: 35px;background: url(../images/product/info.png)no-repeat;display: inline-block;color: #fff;}
+.info:hover{color: #e3e8ef;}
+.info:visited{color: #e3e8ef;}
+.info span{position: absolute;left:0;width: 35px;height: 35px;display: inline-block;
+		transition: left 1s;
+		-moz-transition: left 1s;	/* Firefox 4 */
+-webkit-transition: left 1s;	/* Safari 和 Chrome */
+		-o-transition: left 1s;	}
+.info span:hover{left:10px;color: #e3e8ef;}
+/*Research & Development*/
+.ad{width: 100%;margin-top: 80px;}
+
+/*Commonweal Activity*/
+.Commonweal{margin-bottom: 60px;}
+.Common_tabs{width: 100%;height: 186px;border-bottom: 1px solid #e5e5e5;margin-bottom: 40px;}
+.Common_tabs ul{width: 1180px;height: 186px;margin: 0 auto;}
+.Common_tabs ul li{float: left;}
+.Common_tabs ul li:nth-of-type(1){margin-left: 78px;}
+.Common_tabs ul li:nth-of-type(2){margin-left: 185px;}
+.Common_tabs ul li:nth-of-type(3){margin-left: 213px;}
+.Common_tabs ul li a{padding:32px 23px 54px;display: inline-block;text-align: center;}
+.Common_tabs ul li a:hover{border-bottom:2px solid #000;}
+.Common_active{border-bottom:2px solid #000;}
+.Common_tabs ul li a p:first-child{font-size: 60px;color: #333;font-weight: 300;}
+.Common_tabs ul li a p:last-child{color: #777;}
+.slideBox{ overflow:hidden; zoom:1; position:relative;}
+.parBd{width: 1180px;margin: 0 auto; margin-bottom: 32px;}
+.parBd ul{ overflow:hidden; zoom:1;   }
+.parBd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;margin-right: 40px;  }
+.parBd ul li .pic{ text-align:center; }
+.parBd ul li .pic img{ width:250px; height:180px; display:block; }
+.parBd ul li .title a{ line-height:50px;color: #767676;   }
+.parBd ul li .title a:hover{color: #0055aa;}
+.the_more{text-align: center;width: 1200px;height: 60px;border-bottom: 1px solid #e5e5e5;border-top: 1px solid #e5e5e5;margin: 0 auto;}
+.the_more a{color: #323232;line-height: 60px;}
+.the_more a:hover{color: #0055aa;}
+/*Commonweal Activity*/
+
