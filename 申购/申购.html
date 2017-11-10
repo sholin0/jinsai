@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.tc {
+				width: 100%;
+				height: 100%;
+				background: rgba(72, 72, 72, 0.5);
+				position: fixed;
+				z-index: 9999;
+				display: none;
+			}
+			
+			.tc-box {
+				width: 860px;
+				height: 550px;
+				position: fixed;
+				top: 50%;
+				font-size: 0;
+				left: 50%;
+				background: white;
+				border-radius: 6px;
+				z-index: 99999;
+				transform: translate(-50%, -50%);
+			}
+			
+			.xx {
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				top: 3%;
+				left: 100%;
+				z-index: 9999999999;
+			}
+			
+			.tc-text {
+				width: 93%;
+				height: 50px;
+				line-height: 50px;
+				position: absolute;
+				font-size: 18px;
+				background: #d2e7f7;
+				border: 1px solid #7ab1de;
+				border-radius: 3px;
+				text-align: center;
+				left: 50%;
+				top: 10%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.tc-left,
+			.tc-right {
+				width: 50%;
+				display: inline-block;
+				height: 550px;
+				vertical-align: top;
+			}
+			
+			.tc-left {
+				background: #f9f9f9;
+				border-radius: 7px;
+			}
+			
+			.tc-Lbox {
+				width: 92.8%;
+				height: 470px;
+				margin-top: 80px;
+				margin-left: 30px;
+				border-right: 1px solid #e4e4e4;
+			}
+			
+			.tc-Lbox h3,
+			.tc-Rbox h3 {
+				font-size: 24px;
+				color: black;
+				padding-top: 50px;
+			}
+			
+			.tc-Lbox p {
+				color: #9e9d9d;
+				font-size: 14px;
+				margin-top: 20px;
+			}
+			
+			.tc-Lbox p a {
+				display: inline-block;
+				vertical-align: bottom;
+			}
+			
+			.ptext {
+				margin-top: 35px;
+				display: block;
+				font-size: 14px;
+				color: #e8a20d;
+			}
+			
+			.protext {
+				margin-left: 40px;
+				width: 85%;
+				color: #9e9d9d;
+				font-size: 14px;
+			}
+			
+			.tc-Rbox {
+				width: 85.8%;
+				height: 470px;
+				margin-top: 80px;
+				margin-left: 30px;
+			}
+			
+			.hint {
+				margin-top: 10px;
+			}
+			
+			.hints {
+				margin-top: 35px;
+				font-size: 14px;
+				color: black;
+			}
+			
+			.hints span {
+				font-size: 14px;
+				color: #8e8d8d;
+				margin-right: 10px;
+			}
+			
+			.hint span {
+				display: inline-block;
+				width: 70px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				color: #8e8d8d;
+				text-align: right;
+				margin-right: 10px;
+			}
+			
+			.hint select {
+				width: 90px;
+				height: 44px;
+				border: 1px solid #e4e4e4;
+				color: #a3afb7;
+				margin-right: 10px;
+				text-indent: 1.5em;
+				border-radius: 3px;
+			}
+			
+			.hint input.phone {
+				width: 186px;
+			}
+			
+			.hint input {
+				width: 286px;
+				height: 40px;
+				color: #a3afb7;
+				border: 1px solid #e4e4e4;
+				border-radius: 3px;
+				text-indent: 1.5em;
+				display: inline-block;
+				vertical-align: top;
+			}
+			
+			.tc-Rbox p {
+				font-size: 14px;
+				color: red;
+				margin-top: 15px;
+			}
+			
+			.tc-Rbox p img {
+				display: inline-block;
+				margin-right: 5px;
+				margin-left: 83px;
+				vertical-align: text-bottom;
+			}
+			
+			.sub {
+				display: inline-block;
+				text-align: center;
+				width: 286px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 16px;
+				color: white;
+				border: none;
+				margin-left: 83px;
+				border-radius: 3px;
+				background: #356199;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input class="mo" type="button" name="" id="" value="" />
+		<div class="tc">
+			<div class="tc-box">
+				<div class="tc-text">如果您需要购买我们的产品，请联系我们或留下您的信息、非常感谢！</div>
+				<div class="tc-left">
+					<div class="tc-Lbox">
+						<h3>我们的联系信息</h3>
+						<span class="ptext">银河期货有限公司 财富管理中心</span>
+						<p>电话（Tel）:86-21-60329695\86-010-58569753</p>
+						<p>在线资询：
+							<a><img src="images/qq_03.png" /></a>
+						</p>
+						<p>地址：上海浦东新区世纪大道1501号（向城路288号）9楼</p>
+						<span class="protext">(邮编200120)</span>
+						<p class="protext">北京市朝阳区朝阳门外大街16号，中国人寿大厦13层1306号（邮编100020）</p>
+						<p class="protext">Floor 13,China Life Tower,No.16 Chaoyangmenwai Street,Beijing,P.R. China(100020)</p>
+
+					</div>
+				</div>
+				<div class="tc-right">
+					<div class="tc-Rbox">
+						<h3>您的信息</h3>
+						<form action="" method="post">
+
+							<div class="hints"><span>意向产品：</span>银河期货金陵川康量化1号资产管理计划</div>
+							<div class="hint"><span>姓名：</span><input type="text" name="" id="" value="" placeholder="请输入您的姓名" /></div>
+							<div class="hint"><span>手机：</span><input type="text" name="" id="" value="" placeholder="请输入您的手机号" /></div>
+
+							<div class="hint"><span>座机：</span>
+								<select name="">
+									<option value="">区号</option>
+									<option value="">0289</option>
+									<option value="">0157</option>
+									<option value="">0915</option>
+								</select>
+								<input type="text" name="" id="" value="" placeholder="请输入座机号" class="phone" /></div>
+							<div class="hint"><span>身份证：</span><input type="text" name="" id="" value="" placeholder="请输入您的身份证号" /></div>
+							<p><img src="images/!_03.png" />手机号格式不对</p>
+
+							<input type="submit" value="提交" class="sub" />
+						</form>
+					</div>
+				</div>
+				<div class="xx"><img src="images/s-x_03.png" /></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			//申购弹窗
+			$(".mo").click(function() {
+				$(".tc").css('display', 'block');
+
+			})
+			$(".tc-box").click(function() {
+				event.stopPropagation();
+				$(".tc").css('display', 'block');
+
+			})
+			$(".xx").click(function() {
+				event.stopPropagation();
+				$(".tc").css('display', 'none');
+			})
+			$(".tc").click(function() {
+				event.stopPropagation();
+				$(".tc").css('display', 'none');
+			})
+			/*申购弹出*/
+		</script>
+	</body>
+
+</html>

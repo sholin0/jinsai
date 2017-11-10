@@ -1,0 +1,26 @@
+.main{width:100%;background: #f2f2f2;padding: 30px 0;}
+.essen_warp{width: 1180px;margin: 0 auto;}
+.essen{padding: 30px 25px;background: #fff;}
+.essen h3{font-size: 24px;color: #37474f;width: 100%;padding-bottom: 22px;border-bottom: 1px solid #e4eaec;margin-bottom: 30px;}
+.essen_tb tr{width: 100%;height: 42px;}
+.essen_tb tr:nth-child(odd){background: #f9f9f9;}
+.essen_tb th{text-align: right;width: 176px;border-right: 1px dashed #e4eaec;padding-right: 43px;}
+.essen_tb td{text-align: left;width: 953px;padding-left: 50px;line-height: 30px;padding-right: 38px;}
+.private{width: 100%;background: #fff;margin-top: 30px;}
+.undeline{border-bottom: 1px dashed #e4eaec;}
+.Optional{width: 100%;background: #fff;margin-top: 30px;}
+.Transaction_History td{border-bottom:1px dashed #ccc;border-right: 1px dashed #ccc;}
+.Transaction_History td:nth-child(10n){border-right: none;}
+.Transaction_History th{border-right: 1px dashed #ccc;}
+.Transaction_History th:last-child{border-right: none;}
+.Transaction_History th,.Transaction_History td{text-align: center;}
+.Transaction_History tr{width: 100%;height: 42px;}
+.Transaction_History tr:first-child{background: #e9e9ea;}
+.Transaction_History th:first-child{width: 60px;}
+.Transaction_History th:nth-of-type(2),.Transaction_History th:nth-of-type(6),.Transaction_History th:nth-of-type(7),.Transaction_History th:nth-of-type(8),.Transaction_History th:nth-of-type(9){width: 88px;}
+.Transaction_History th:nth-of-type(3){width: 284px;}
+.Transaction_History th:nth-of-type(4){width: 102px;}
+.Transaction_History th:nth-of-type(5){width: 110px;}
+.Transaction_History th:last-child{width: 125px;}
+.Transaction_History td:nth-of-type(3){text-align: left;padding-left: 15px;}
+table th{color: #484848;}
