@@ -1,0 +1,27 @@
+<div class="zi_left fl">
+		<div class="top">
+			<span class="span1">产品中心</span>
+			<span  class="span2">Product Center</span>
+		</div>
+		{pc:content action="category" catid="9" num="25" siteid="$siteid" order="listorder ASC"}
+		<ul>
+				{loop $data $r}
+			<li>
+				<a href="{$r[url]}">{$r[catname]}</a>
+					<ol>
+						{loop subcat($r['catid']) $r2}
+						<li><a href="{$r2[url]}" >{$r2[catname]}</a>
+							{pc:content action="lists" catid="$r2[catid]" siteid="$siteid" num="3"  order="listorder DESC"}
+							{loop $data $r3}
+							{if $r3 != null}
+							<div><a href="{$r3[url]}"<?php if($catid == $r3[catid]) echo 'class="co_riActive"';?>>{$r3[title]}</a></div>
+							{/if}
+							{/loop}
+						</li>
+						{/loop}
+					</ol>
+			</li>
+			{/loop}
+		</ul>
+		{/pc}
+	</div>

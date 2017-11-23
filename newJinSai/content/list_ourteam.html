@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+
+	<meta name="keywords" content="{$SEO['keyword']}">
+
+	<meta name="description" content="{$SEO['description']}">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- include main css -->
+
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}animate.css"/>
+
+	<!--[if lt IE 9]>
+
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div>
+
+	<!--header-->
+
+	{template "content","header"}
+
+	<!--banner-->
+
+	{template "content","bread"}
+
+
+
+	<div class="zi_com about_MIX clearfix">
+
+		{template "content","nav_jinsai"}
+
+		
+
+		<div class="zi_right rl">
+
+			<div class="autoWidth">
+
+			<div class="about_team rl">	
+
+					{pc:content action="lists" catid="$catid" order="id ASC" num="1" moreinfo="1"}  
+
+					{loop $data $v}  
+
+			<a href="{$v[url]}">
+
+					<div class="about_team_top rl">
+
+					<div class="about_team_top_fl fl wow bounceInRight">
+
+						
+
+						<div class="about_team_fl_img fl">
+
+							<img class="about_team_sos" src="{$v[thumb]}"/>
+
+						</div>
+
+						<div class="about_team_sy rl">
+
+							<p><strong>{$v[title]}</strong>{$v['description']}</p>
+
+							<p>{str_cut(strip_tags($v[content]),300)}</p>
+
+						
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</a>
+
+			{/loop}  
+
+			{/pc}
+
+				
+
+				
+
+				<div class="about_team_co clearfix fl">
+
+						{pc:content action="lists" catid="$catid" num="4" order="id DESC" page="$page"}
+
+					<ul>
+
+						{loop $data $v}
+
+						<li class="wow fadeInUp" data-wow-delay="0.3s">
+
+							<a href="{$v['url']}">
+
+							<img src="{IMG_PATH}/upload/team_a.jpg"/>
+
+							<p><span>{$v[title]}</span><span>先生</span></p>
+
+							<p>{$v['description']}</p>
+
+							</a>
+
+						</li>
+
+						{/loop}
+
+					</ul>
+
+				</div>
+
+				<div class="page clearfix fl">
+
+					<div class="pages">{$page}</div>
+
+				</div>
+
+				{/pc}
+
+			</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	
+
+	
+
+	
+
+	{template "content","footer"}
+
+	
+
+	{template "content","nav"}
+
+</div>
+
+<!--Include Js-->
+
+<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>
+
+<script>
+
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+
+	new WOW().init();
+
+};
+
+</script>						

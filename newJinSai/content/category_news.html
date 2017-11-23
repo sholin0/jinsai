@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}animate.css"/>
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div>
+	<!--header-->
+	{template "content","header"}
+	<!--banner-->
+	{template "content","bread"}
+
+
+	<div class="zi_com clearfix">
+	{template "content","mo_bread"}
+				
+		<div class="clearfix">
+			<div class="recruit_fl fl wow bounceInLeft">
+				<div class="banner_in">
+					<!--轮播-->
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- 轮播（Carousel）指标 -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#myCarousel" data-slide-to="3"></li>
+							<li data-target="#myCarousel" data-slide-to="4"></li>							<li data-target="#myCarousel" data-slide-to="5"></li>							<li data-target="#myCarousel" data-slide-to="6"></li>
+						</ol>   
+						<!-- 轮播（Carousel）项目 -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img class="img-responsive" src="{IMG_PATH}/upload/banner_r.jpg" alt="First slide">
+								<div class="opc"></div>
+								<div class="carousel-caption">国家科技进步奖首次授予生长激素产品 1</div>
+							</div>
+							<div class="item">
+								<img class="img-responsive" src="{IMG_PATH}/upload/banner_r.jpg" alt="Second slide">
+								<div class="opc"></div>
+								<div class="carousel-caption">国家科技进步奖首次授予生长激素产品2</div>
+							</div>
+							<div class="item">
+								<img class="img-responsive" src="{IMG_PATH}/upload/banner_r.jpg" alt="Third slide">
+								<div class="opc"></div>
+								<div class="carousel-caption">国家科技进步奖首次授予生长激素产品 3</div>
+							</div>
+							<div class="item">
+								<img class="img-responsive" src="{IMG_PATH}/upload/banner_r.jpg" alt="Third slide">
+								<div class="opc"></div>
+								<div class="carousel-caption">国家科技进步奖首次授予生长激素产品 4</div>
+							</div>
+							<div class="item">
+								<img class="img-responsive" src="{IMG_PATH}/upload/banner_r.jpg" alt="Third slide">
+								<div class="opc"></div>
+								<div class="carousel-caption">国家科技进步奖首次授予生长激素产品 5</div>
+							</div>														<div class="item">								<img class="img-responsive" src="{IMG_PATH}/upload/banner_r.jpg" alt="Third slide">								<div class="opc"></div>								<div class="carousel-caption">国家科技进步奖首次授予生长激素产品 6</div>							</div>							<div class="item">								<img class="img-responsive" src="{IMG_PATH}/upload/banner_r.jpg" alt="Third slide">								<div class="opc"></div>								<div class="carousel-caption">国家科技进步奖首次授予生长激素产品 7</div>							</div>
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+						<a class="carousel-control_prev" href="#myCarousel" 
+						   data-slide="prev"></a>
+						<a class="carousel-control_next" href="#myCarousel" 
+						   data-slide="next"></a>
+					</div> 
+				    <!--轮播-->
+    			</div>
+			</div>
+			
+			<div class="recruit_rl rl wow bounceInRight">
+				<div class="recruit_rl_top underline">
+					{pc:content action="category" catid="$catid" num="2" siteid="$siteid" order="listorder ASC"}
+					{loop $data $r}
+					<div>{$r[catname]}</div>
+					{/loop}
+					{/pc}
+				</div>
+				
+			<div class="autoWidth">	
+			<div class="recruit_rl_tabs">
+				<div class="tabs clearfix">
+						{pc:content action="lists" catid="33" order="id DESC" num="1" moreinfo="1"}
+						{loop $data $r2}
+					<h4>{$r2['title']}</h4>
+					<p>{str_cut($r2['content'],150)}<a href="{$r2['url']}">[详细内容]</a></p>
+						{/loop}
+						{/pc}
+					<ul>
+						{pc:content action="lists" catid="33" order="id DESC" num="5" moreinfo="1"}
+						{loop $data $r2}
+						<li><a href="{$r2['url']}">{$r2['title']}</a><span>[{date('Y-m-d',$r2[inputtime])}]</span></li>
+		
+						{/loop}
+						{/pc}
+					</ul>
+				</div>
+				<div class="tabs clearfix" style="display: none;">
+						{pc:content action="lists" catid="86" order="id DESC" num="1" moreinfo="1"}
+						{loop $data $r2}
+					<h4>{$r2['title']}</h4>
+					<p>{str_cut($r2['content'],150)}<a href="{$r2['url']}">[详细内容]</a></p>
+						{/loop}
+						{/pc}
+					<ul>
+							{pc:content action="lists" catid="86" order="id DESC" num="5" moreinfo="1"}
+							{loop $data $r2}
+						<li><a href="{$r2['url']}">{$r2['title']}</a><span>[{date('Y-m-d',$r2[inputtime])}]</span></li>
+						{/loop}
+						{/pc}
+					</ul>
+				</div>						
+			</div>
+			</div>
+			
+			</div>
+		</div>
+		
+		
+		<div class="notice clearfix">
+			<h3>{$CATEGORYS[89][catname]}：</h3>
+			<ul>
+				{pc:content action="lists" catid="89" order="id DESC" num="5" moreinfo="1"}
+				{loop $data $r2}
+				<li class="tHide"><a href="{$r2['url']}">{$r2['title']}</a></li>
+				{/loop}
+				<li><a href="{$CATEGORYS[89][url]}"><img src="{IMG_PATH}/more_notice.png"/></a></li>
+				{/pc}
+			</ul>
+		</div>
+		
+	</div>
+	
+<div class="autoWidth">
+	<div class="group clearfix">
+		<div class="zi_com">
+		<div class="group_co">
+			<div class="group_fl fl">
+				<div class="group_fl_top underline">
+					<h3>{$CATEGORYS[94][catname]}</h3>
+					<a href="{$CATEGORYS[94][url]}">更多》</a>
+				</div>
+				<ul class="group_list">
+						{pc:content action="lists" catid="94" order="id DESC" num="4" moreinfo="1"}
+						{loop $data $r}
+					<li class="wow fadeInUp" data-wow-delay="0.2s">
+						<a href="{$r[content]}" target="_blank">
+							<img src="{IMG_PATH}/upload/group.jpg"/>
+							<p>{$r[title]}</p>
+						</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+				
+			</div>
+			<div class="group_rl rl">
+				<div class="group_fl_top underline">
+					<h3>{$CATEGORYS[95][catname]}</h3>
+					<a href="{$CATEGORYS[95][url]}">更多》</a>
+				</div>
+				<div class="wow bounceInRight">
+					<img src="{$CATEGORYS[95][image]}"/>
+				</div>
+			</div>
+		</div>		
+	</div>
+	</div>
+<div class="zi_com">	
+	<div class="class_list_warp">
+		<div class="class_list">
+			<ol>
+				<li class="wow fadeInUp" data-wow-delay="0.3s">
+					<div class="group_fl_top underline">
+						<h3>{$CATEGORYS[90][catname]}</h3>
+						<a href="{$CATEGORYS[90][url]}">更多》</a>
+					</div>
+					<ul>
+						{pc:content action="lists" catid="90" order="id DESC" num="5" moreinfo="1"}
+						{loop $data $r2}
+						<li><a class="tHide" href="{$r2['url']}">{$r2['title']}</a></li>
+						{/loop}
+						{/pc}
+					</ul>
+				</li>
+				<li class="wow fadeInUp" data-wow-delay="0.6s">
+					<div class="group_fl_top underline">
+						<h3>{$CATEGORYS[91][catname]}</h3>
+						<a href="{$CATEGORYS[91][url]}">更多》</a>
+					</div>
+					<ul>
+						{pc:content action="lists" catid="91" order="id DESC" num="5" moreinfo="1"}
+						{loop $data $r2}
+						<li><a class="tHide" href="{$r2['url']}">{$r2['title']}</a></li>
+						{/loop}
+						{/pc}
+					</ul>
+				</li>
+				<li class="wow fadeInUp" data-wow-delay="0.9s">
+					<div class="group_fl_top underline">
+						<h3>{$CATEGORYS[92][catname]}</h3>
+						<a href="{$CATEGORYS[92][url]}">更多》</a>
+					</div>
+					<ul>
+						{pc:content action="lists" catid="92" order="id DESC" num="5" moreinfo="1"}
+						{loop $data $r2}
+						<li><a class="tHide" href="{$r2['url']}">{$r2['title']}</a></li>
+						{/loop}
+						{/pc}
+					</ul>
+				</li>
+			</ol>
+		</div>
+	</div>
+</div>	
+</div>
+</div>
+
+	{template "content","footer"}
+
+	{template "content","nav"}
+</div>
+<!--Include Js-->
+<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){ 			$('.recruit_rl_top>div').eq(0).addClass('divActive');
+		$('.recruit_rl_top>div').click(function(){
+			$('.recruit_rl_tabs>div').hide();			$('.recruit_rl_top>div').removeClass('divActive');			$(this).addClass('divActive');
+			$('.recruit_rl_tabs>div').eq($(this).index()).show();
+		});	$('.recruit_fl').hover(function(){		$('.carousel-control_next').css('opacity','1');		$('.carousel-control_prev').css('opacity','1');	},function(){		$('.carousel-control_next').css('opacity','.3');		$('.carousel-control_prev').css('opacity','.3');	});
+		/*移动端轮播touch*/
+			$carousels = $("#myCarousel");//effect是轮播图id
+			var startX,endX;
+			var offset = 50;
+			$carousels.on('touchstart',function (e) {
+			    startX = e.originalEvent.touches[0].clientX;
+			});
+			$carousels.on('touchmove',function (e) {
+			    endX = e.originalEvent.touches[0].clientX;
+			});
+			$carousels.on('touchend',function (e) {
+			    var distance = Math.abs(startX - endX);
+			    if (distance > offset){
+			
+			        $(this).carousel(startX >endX ? 'next':'prev');
+			    }
+			})
+		/*移动端轮播touch*/
+   });
+</script>
+</body>
+</html>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>

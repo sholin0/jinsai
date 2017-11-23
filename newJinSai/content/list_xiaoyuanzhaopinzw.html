@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+
+		<meta name="keywords" content="{$SEO['keyword']}">
+
+		<meta name="description" content="{$SEO['description']}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- include main css -->
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css" />
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}calendar.css" />
+
+
+		<!--[if lt IE 9]>
+
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+	</head>
+
+
+
+	<body>
+
+		<div>
+
+			<!--header-->
+
+		{template "content","header"}
+
+		<!--banner-->
+
+		{template "content","bread"}
+
+	
+
+
+
+			<!--main-->
+
+			
+
+			<div class="xz-container">
+
+				<div class="xz-ctext1">
+
+					<select name="">
+
+						<option value="">职位类别</option>
+
+						<option value="">采销类</option>
+
+						<option value="">采销类</option>
+
+						<option value="">采销类</option>
+
+					</select>
+
+					<select name="">
+
+						<option value="">所在城市</option>
+
+						<option value="">北京</option>
+
+						<option value="">上海</option>
+
+						<option value="">广州</option>
+
+					</select>
+
+					<input class="Keyword"  id="dt" type="text" name="" id="" value="" placeholder="发布时间"/>
+ 					 <div id="dd"></div>
+					<input class="Keyword" type="text" name="" id="" value="" placeholder="请输入关键字"/>
+
+					<a class="xz-a1">搜索</a>
+
+				</div>
+
+				
+
+				<div class="autoWidth">
+						{pc:content action="lists" catid="$catid" num="3" order="id DESC" page="$page" moreinfo="1"} 
+						{loop $data $r}
+				<div class="xz-ctext2">
+
+					<div class="xz-text1">
+
+							{$r[title]}
+
+						<a class="now" href="index.php?m=formguide&c=index&a=show&formid=14&siteid=1&pc_hash=iVhUfn">立即申请</a>
+
+					</div>
+
+					<div class="xz-text2">
+
+						<p>
+
+							<a class="xz-a2">{$r[description]}</a>
+
+							<a class="xz-a3">{date('m-d',$r[inputtime])}发布</a>
+
+						</p>
+						
+						<p>
+							{$r[content]}
+							<a href="{$r[url]}" class="xz-a4">详情> </a>
+
+						</p>
+
+					</div>
+
+				</div>
+				{/loop}
+				
+
+
+				<div class="pages">{$page}</div>
+
+				</div>
+				{/pc}
+				
+
+			</div>
+
+			<!--main-->
+
+
+
+			{template "content","footer"}
+
+			
+
+			{template "content","nav"}
+
+		</div>
+
+		<!--Include Js-->
+		<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="{JS_PATH}calendar.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+			
+							$('#dd').calendar({
+			        trigger: '#dt',
+			        zIndex: 999,
+					format: 'yyyy-mm-dd',
+			        onSelected: function (view, date, data) {
+			            console.log('event: onSelected')
+			        },
+			        onClose: function (view, date, data) {
+			            console.log('event: onClose')
+			            console.log('view:' + view)
+			            console.log('date:' + date)
+			            console.log('data:' + (data || 'None'));
+			        }
+			    });
+			
+			});
+</script>
+	</body>
+</html>
+
+<script>
+
+	if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+
+		new WOW().init();
+
+	};
+
+</script>

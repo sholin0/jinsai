@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+
+		<meta name="keywords" content="{$SEO['keyword']}">
+
+		<meta name="description" content="{$SEO['description']}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- include main css -->
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}Match.css"/>
+
+		<!--[if lt IE 9]>
+
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+	</head>
+
+
+
+	<body>
+
+		<div>
+
+		<!--header-->
+
+		{template "content","header"}
+
+		<!--banner-->
+
+		{template "content","bread"}
+
+			<!--main-->
+
+			<div class="autoWidth">
+
+			<div class="s-container clearfix">
+				<form action="" method="post">
+				<div class="s-ctext1">
+
+					<a class="text-color">职位搜索</a>
+
+					<div class="search"><input class="Text" type="text" name="" id="" value="" /><input class="Ser" type="button" name="" id="" value="搜 索" /></div>
+
+				</div>
+
+				<div class="word">
+
+					<div class="work">
+
+						<a>工作地点：</a>
+
+						<a>全部</a>
+
+						<a>北京</a>
+
+						<a>上海</a>
+
+						<a>深圳</a>
+
+						<a>武汉</a>
+
+						<!--<a href="#" class="zk1">展开
+
+							<div class="work1"><span class="bt">X</span>
+
+								<ul>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+									<li>上海</li>
+
+								</ul>
+
+							</div>
+
+						</a>-->
+						<a href="javascript:void(0)" class="zk1">
+								<span class="z_open">展开</span>
+								<span class="z_close" style="display:none;">收起</span>
+								<div class="work1"><span class="bt">X</span>
+									<ul>
+										<li>上海</li>
+										<li>上海</li>
+										<li>上海</li>
+										<li>上海</li>
+										<li>上海</li>
+										<li>上海</li>
+										<li>上海</li>
+										<li>上海</li>
+										<li>上海</li>
+									</ul>
+								</div>
+							</a>
+
+
+
+					</div>
+
+					<div class="work">
+
+						<a>职位类别：</a>
+
+						<a>全部</a>
+
+						<a>采销类</a>
+
+						<a>职能类</a>
+
+						<a>运营类</a>
+
+						<a>研发类</a>
+
+						<a>金融业务类</a>
+
+						<!--<a href="#" class="zk2">展开
+
+							<div class="work2"><span class="bt2">X</span>
+
+								<ul>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+									<li>采销类</li>
+
+								</ul>
+
+							</div>
+
+						</a>-->
+						<a href="javascript:void(0)" class="zk2">
+								<span class="z2_open">展开</span>
+								<span class="z2_close" style="display: none;">收起</span>
+								<div class="work2"><span class="bt2">X</span>
+									<ul>
+										<li>采销类</li>
+										<li>采销类</li>
+										<li>采销类</li>
+										<li>采销类</li>
+										<li>采销类</li>
+										<li>采销类</li>
+										<li>采销类</li>
+										<li>采销类</li>
+										<li>采销类</li>
+									</ul>
+								</div>
+							</a>
+
+
+
+					</div>
+
+				</div>
+
+
+
+				<div class="s-ctext2">
+
+					<div class="type">
+
+						<a>排序方式：</a>
+
+						<input type="radio" name="num1" id="" value="1" checked="checked" />
+
+						<a>按发布时间</a>
+
+						<input type="radio" name="num1" id="" value="1" />
+
+						<a>按工作地点</a>
+
+						<input type="radio" name="num1" id="" value="1" />
+
+						<a>按职位类别</a>
+
+					</div>
+
+
+
+				</div>
+				</form>
+		
+
+					<table border="" cellspacing="" cellpadding="" class="sz-list">
+
+					<tr>
+
+						<td><span>招聘职位</span></td>
+
+						<td>所属机构</td>
+
+						<td>招聘人数</td>
+
+						<td>工作地点</td>
+
+						<td>发布时间</td>
+
+						<td>职位申请</td>
+
+					</tr>
+
+					{pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+
+					{loop $data $r}
+
+					<tr>
+
+						<td><span><a href="{$r[url]}">{$r[title]}</a></span></td>
+
+						<?php 
+
+						$str = $r['description'];
+
+						$arr = explode("@",$str);
+
+						foreach($arr as $a){
+
+						echo '<td>'.$a.'</td>';
+
+					}
+
+					?>
+
+						<td>{date('Y-m-d',$r[inputtime])}</td>
+
+						<td>
+
+							<a class="sq" href="index.php?m=formguide&c=index&a=show&formid=15&siteid=1&pc_hash=iVhUfn">申请</a>
+						</td>
+
+					</tr>
+
+					{/loop}
+
+				</table>
+
+				<div class="pages">{$page}</div>
+
+				{/pc}
+
+			</div>
+
+			</div>
+
+			<!--main-->
+
+
+
+
+
+			{template "content","footer"}
+
+			
+
+			{template "content","nav"}	
+
+		</div>
+
+		<!--Include Js-->
+
+		<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+			$(".z_open").click(function() {
+				event.stopPropagation();
+				$(".z_close").css('display', 'block');
+				$(".z_open").css('display', 'none');
+				$(".work1").css("display", "block");
+
+			})
+			$(".z_close").click(function() {
+				event.stopPropagation();
+				$(".z_close").css('display', 'none');
+				$(".z_open").css('display', 'block');
+				$(".work1").css("display", "none");
+
+			})
+
+			$(".z2_open").click(function() {
+				event.stopPropagation();
+				$(".z2_close").css('display', 'block');
+				$(".z2_open").css('display', 'none');
+				$(".work2").css("display", "block");
+
+			})
+			$(".z2_close").click(function() {
+				event.stopPropagation();
+				$(".z2_close").css('display', 'none');
+				$(".z2_open").css('display', 'block');
+				$(".work2").css("display", "none");
+
+			})
+			$("body").click(function() {
+				$(".work1").css("display", "none");
+				$(".work2").css("display", "none");
+				$(".z2_close").css('display', 'none');
+				$(".z2_open").css('display', 'block');
+				$(".z_close").css('display', 'none');
+				$(".z_open").css('display', 'block');
+
+			})
+
+			$(".bt").click(function() {
+				event.stopPropagation();
+				$(".work1").css("display", "none");
+				$(".z_close").css('display', 'none');
+				$(".z_open").css('display', 'block');
+			})
+			$(".bt2").click(function() {
+				event.stopPropagation();
+				$(".work2").css("display", "none");
+				$(".z2_close").css('display', 'none');
+				$(".z2_open").css('display', 'block');
+			});
+			
+	$(".zk1").click(function() {
+
+		$(".work1").css("display","block");
+
+	})
+
+	$(".zk2").click(function() {
+
+
+
+		$(".work2").css("display","block");
+
+	})
+
+	$(".bt").click(function() {
+
+		event.stopPropagation();
+
+		$(".work1").css("display","none");
+
+	})
+
+	$(".bt2").click(function() {
+
+		event.stopPropagation();
+
+		$(".work2").css("display","none");
+
+	});
+	
+	
+	var s = '';
+	var Url = window.location.href;
+	$('.work a').each(function(){
+		
+		$(this).click(function(){
+			
+			s = $(this).eq(0).html();
+			window.location.href = Url+s;
+			console.log(s);
+			
+		});
+	});
+			});
+		</script>
+	</body>
+
+
+
+</html>
+
+<script>
+
+	if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+
+		new WOW().init();
+
+	};
+
+		
+
+
+
+</script>

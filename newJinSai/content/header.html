@@ -1,0 +1,70 @@
+<div class="top">
+
+		<div class="h_top">
+
+	        <a href="#">诚信曝光台</a>
+
+	        <a href="#">金赛站群</a>
+
+	    </div>
+
+</div>
+
+<!--header-->
+
+<header class="header clearfix">
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}Match.css" />
+
+	<div class="container clearfix">
+
+		
+
+		<div class="logo">
+
+			<a class="logo_pc" href="{siteurl($siteid)}"><img src="{IMG_PATH}/logo.jpg" alt="" /></a>
+
+			<a class="logo_mo" href="{siteurl($siteid)}"><img src="{IMG_PATH}/log0_mo.png" alt=""/></a>
+
+		</div>
+
+		<a href="#mmenu" class="iconfont phone-nav">
+
+			 <span class="glyphicon glyphicon-align-justify"></span>
+
+		</a>
+
+			<div class="nav_right">
+
+			{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+
+			<ul>                                                                                                                           
+
+				<li  class=""><a href="{siteurl($siteid)}">网站首页</a></li>
+
+				{loop $data $r}
+
+				{if $r[catid] == $CATEGORYS[$top_parentid][catid]} 
+
+				<li  class="active"><a href="{$r[url]}">{$r[catname]}</a></li>
+
+				{else}
+
+				<li><a href="{$r[url]}">{$r[catname]}</a></li>
+
+				{/if}
+
+				{/loop}
+
+			</ul>
+
+			{/pc}
+
+			{php echo runhook('glogal_menu')}
+
+		</div>
+
+	</div>   		
+
+</header>
+

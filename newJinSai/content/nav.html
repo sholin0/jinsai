@@ -1,0 +1,12 @@
+	<!--移动端  Mmenu-->
+	<nav id="mmenu">
+            {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+			<ul>	                                                                                                                                  
+    			<li  class="active"><a href="{siteurl($siteid)}">网站首页</a></li>
+    			{loop $data $r}
+    			<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+        </ul>
+        {/pc}
+        {php echo runhook('glogal_menu')}
+	</nav>	

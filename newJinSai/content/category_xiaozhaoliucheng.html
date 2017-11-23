@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+
+		<meta name="keywords" content="{$SEO['keyword']}">
+
+		<meta name="description" content="{$SEO['description']}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- include main css -->
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css" />
+
+		<!--[if lt IE 9]>
+
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+	<![endif]-->
+
+	<?php
+
+	if($child){
+
+	   $child_arrary=explode(',',$arrchildid);
+
+			$to_url=$CATEGORYS[$child_arrary[0]][url];
+
+	  echo "<script>window.location.href='".$to_url."'</script>";
+
+		}
+
+	?>
+
+	</head>
+
+
+
+	<body>
+
+		<div>
+
+			<!--header-->
+
+			{template "content","header"}
+
+			<!--banner-->
+
+			{template "content","bread"}
+
+
+
+
+
+			<!--main-->
+
+			<div class="zi_com about_MIX clearfix">
+
+				<div class="zi_left fl">
+
+					<div class="top">
+
+						<span class="span1">招聘流程</span>
+
+						<span  class="span2">Recruitment Process</span>
+
+					</div>
+
+					{pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+
+					<ul>
+
+							{loop $data $r}
+
+						<li>
+
+							<a <?php if($catid == $r[catid]) echo 'class="sy"';?>href="{$r[url]}">{$r[catname]}</a>
+
+						</li>
+
+						{/loop}
+
+					</ul>
+
+					{/pc}
+
+				</div>
+
+				<div class="zi_right rl">
+
+					<div class="zi_right_top">
+
+						<h3>招聘流程</h3>
+
+						{template "content","mo_bread"}
+
+					</div>
+
+					
+
+					<div class="autoWidth">
+
+					<div class="zp-container">
+
+						<div class="zp-container-text">
+
+							<span class="slogan">专业岗位校园招聘</span>
+
+							<div class="zp-text">
+
+								<a>网申时间： 7月21日-9月5日</a>
+
+								<a>宣讲时间： 8月8日-9月4日</a>
+
+								<a>在线笔试： 非技术类： 9月7日</a>
+
+								<a class="zp-text1">技术类： 9月8日</a>
+
+								<a>线路面试： 长春：9月16日-9月21日</a>
+
+								<a class="zp-text1">武汉、大连、南京、成都、上海、广州、西安： 9月23日-9月27日</a>
+
+								<a>Offer发放： 9月25日-10月15日</a>
+
+								<a>入职时间： 2018年3月至7月均可</a>
+
+								
+
+							</div>
+
+						</div>
+
+						<div class="zp-container-text">
+
+							<span class="slogan">专业岗位校园招聘</span>
+
+							<div class="zp-text">
+
+								<a>网申时间： 7月21日-9月5日</a>
+
+								<a>宣讲时间： 8月8日-9月4日</a>
+
+								<a>在线笔试： 非技术类： 9月7日</a>
+
+								<a class="zp-text1">技术类： 9月8日</a>
+
+								<a>线路面试： 长春：9月16日-9月21日</a>
+
+								<a class="zp-text1">武汉、大连、南京、成都、上海、广州、西安： 9月23日-9月27日</a>
+
+								<a>Offer发放： 9月25日-10月15日</a>
+
+								<a>入职时间： 2018年3月至7月均可</a>
+
+								
+
+							</div>
+
+						</div>
+
+						<div class="zp-container-text">
+
+							<span class="slogan">专业岗位校园招聘</span>
+
+							<div class="zp-text">
+
+								<a>网申时间：7月21日-9月5日</a>
+
+								<a>宣讲时间： 8月8日-9月4日</a>
+
+								<a>在线笔试： 非技术类： 9月7日</a>
+
+								<a class="zp-text1">技术类： 9月8日</a>
+
+								<a>线路面试： 长春：9月16日-9月21日</a>
+
+								<a class="zp-text1">武汉、大连、南京、成都、上海、广州、西安： 9月23日-9月27日</a>
+
+								<a>Offer发放： 9月25日-10月15日</a>
+
+								<a>入职时间： 2018年3月至7月均可</a>
+
+								
+
+							</div>
+
+						</div>
+
+					</div>
+
+					</div>
+
+				</div>
+
+				</div>
+
+				<!--main-->
+
+
+
+					
+
+			{template "content","footer"}
+
+
+
+			{template "content","nav"}
+
+			</div>
+
+			<!--Include Js-->
+
+			<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>
+
+<script>
+
+	if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+
+		new WOW().init();
+
+	};
+
+</script>

@@ -1,0 +1,811 @@
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 1180px;
+	}
+	body {
+		font-size: 14px;
+	}
+	.footer_co {
+		clear: both;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width:992px) {
+	.recruit_rl_top>div {
+		line-height: 40px;	margin-top: 6px;
+		width: 50%;
+		text-align: center;
+	}.recruit_list_ul li:first-child{	margin-left: 2%!important;}
+	.recruit_rl {
+		width: 100%;
+	}
+	.recruit_fl {
+		width: 100%;
+	}
+	.notice ul{
+		width: 80%;
+	}
+	.notice ul li {
+		margin-right: 0;
+		float: none;
+		display: inline-block;
+		padding-left: none;
+		margin-left: 5px;
+	}
+	.notice ul li a{font-size: 12px;}
+	.group_rl{
+		width: 100%;
+	}
+	.group_fl{
+		margin: auto;
+width: 100%;
+	}
+	.recruit_fl,
+	.recruit_rl {
+		display: block;
+		width: 100%;
+	}
+	.recruit_list ul>li {
+		width: 47%;
+		margin-right: 0px;
+		margin-left: 2%;
+		margin-top: 20px;
+	}
+	.csd_fl_img,
+	.csd_rl_img {
+		width: 90%;
+		margin-left: 5%;
+	}
+	.csd_fl_img img,
+	.csd_rl_img img {
+		width: 100%;
+	}
+	.csd_sy {
+		width: 90%;
+		margin-left: 5%;
+		border-left: 8px solid #f7f7f7;
+		border-top: none;
+	}
+	.tool_fl,
+	.tool_rl {
+		width: 80%;
+		display: block;
+	}
+	.tool_fl {
+		margin-left: 5%;
+	}
+	.tool_rl {
+		margin-right: 15%;
+	}
+	.tool_rl_dtalis{margin-right: 0!important;width: 100%;}
+	.x-container,
+	.xm-container,
+	.Cam_Rec,
+	.r-container,
+	.r-container-text,
+	.show_top_introduce,
+	.production_base,
+	.recruit_rl ul {
+		width: 98%;
+	}
+	.query_list,
+	.Manager {
+		width: 96%;
+	}
+	.xm-container,
+	.query_list,
+	.Cam_Rec,
+	.r-container-text,
+	.recruit_rl ul {
+		margin: auto;
+	}
+	.Cam_Rec {
+		margin-bottom: 50px;
+	}
+	.Clinical_pc .project {
+		font-size: 20px;
+	}
+	.Clinical_pc .en_project {
+		font-size: 16px;
+	}
+	
+}@media only screen and (min-width: 768px) and (max-width:970px) {	.Forecast_list li {		/*width:32%;*/		margin-bottom: 2%;		margin-left: 1.3%!important;	}}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.container,
+	.h_top {
+		width: 970px;
+		padding: 0;
+	}
+	.bread,
+	.footer_co {
+		width: 98%;
+	}
+	.header .nav_right ul li {
+		margin-right: 23px;
+	}
+	/*.footer_co .footer_co_fl li {
+		margin-right: 64px;
+	}*/
+	.footer_rl {
+		margin-left: 0;
+		float: right;
+	}
+	.study_co {
+		width: 53.99%;
+	}
+	.study_base {
+		padding: 2.1% 3%
+	}
+	.csd_fl_img,
+	.csd_rl_img {
+		width: 100%;
+	}
+	.csd_fl_img img,
+	.csd_rl_img img {
+		width: 96%;
+	}
+	.csd_sy {
+		width: 96%;
+		border-top: none;
+		border-left: 8px solid #f7f7f7;
+	}
+	.tool_fl {
+		width: 542px;
+	}
+	.tool_rl {
+		width: 43%;
+	}
+	.tool_rl_dtalis{margin-right: 0!important;width: 100%;}
+/*	.recruit_fl,
+	.recruit_rl {
+		width: 100%;
+	}*/
+	.notice ul li {
+		margin-right: 0;
+	}
+/*	.group_co,
+	.group_fl,
+	.group_rl,
+	.class_list {
+		width: 100%;
+	}*/
+	.footer_p {
+		width: 970px;
+	}
+	.recruit_list_ul {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	.recruit_list ul>li {
+		width: 24%;
+	}
+	.product_co {
+		height: 804px;
+		margin: 0 auto;
+
+	}
+	.home_news .news_com {
+		width: 970px;
+	}
+	.Clinical_project_co,
+	.Preclinical_project_co {
+		width: 60%;
+	}
+	.zi_com {
+		/*width: 970px;*/
+	}
+	/*.home_news .news_com .n_right{width: 768px;}*/
+	.home_news .news_com .n_right ul li .ri {
+		width: 80px;
+		height: 80px;
+		margin-left: 6%;
+	}
+	.n_left_co {
+		width: 90%;
+	}
+	/*.n_right_co {
+		width: 26.3%;
+	}
+	*/
+	.news_tabs {
+		margin-left: 6%;
+	}
+	.home_news .news_com .n_right ul li .ri time {
+		line-height: 40px;
+	}
+	.home_news .news_com .n_right {
+		height: 794px;
+	}
+/*	.Common_tabs ul,*/
+	/*.parBd {
+		width: 970px;*/
+	
+	/*.Common_tabs ul li:nth-of-type(1) {
+		margin-left: 0;
+	}
+	.Common_tabs ul li:nth-of-type(2) {
+		margin-left: 124px;
+	}
+	.Common_tabs ul li:nth-of-type(3) {
+		margin-left: 208px;
+	}
+	.the_more {
+		width: 990px;
+	}*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.container {
+		width:100%;
+	}
+	.class_list {
+		width: 100%;
+	}
+	.class_list ol>li {
+		width: 100%;
+		float: left;
+	}
+	#footer_mo {
+		clear: both;
+	}
+	.Clinical_mo .project {
+		font-size: 30px;
+		top: 30%;
+	}
+	.Clinical_mo p.heng {
+		top: 46%;
+	}
+	.Clinical_mo .en_project {
+		top: 52%;
+		font-size: 18px;
+	}
+	.Clinical_mo .pro {
+		top: 60%;
+	}
+	.ulList_mo_rl p.pro_title_mo {
+		top: 62%;
+		font-size: 32px;
+	}
+	.ulList_mo_rl p.pro_title_English_mo {
+		font-size: 16px;
+		top: 80%;
+	}
+	.n_left_co {
+		width: 100%;
+		float: right;
+	}
+	.n_right_co {
+		width: 26.3%;
+	}
+	/*.home_news .news_com .n_right ul li .ri {
+		width: 6%;
+	}*/
+	.home_news .news_com .n_right ul li .wen_nei {
+		width: 78%;
+	}
+	.home_news .news_com .n_right ul li .ri time {
+		line-height: 40px;
+	}
+	
+}
+
+@media screen and (max-width: 640px) {
+	.container {
+		width: 100%
+	}	.recruit_list ul>li{		margin-left: 0;	}
+}
+
+@media (max-width: 1024px) {
+	.zi_com .zi_left {
+		width: 21%;
+	}
+	.zi_com .zi_right {
+		width: 76%;
+	}
+	.carousel-control_prev,
+	.carousel-control_next {
+		display: none;
+	}
+	#ulList li>img {
+		height: 100%;
+	}
+	.product_co #ulList .even a,
+	.product_co #ulList .ood a {
+		background-position-x: center;
+	}
+}
+
+@media (max-width: 1000px) {
+	.phone-nav {
+		display: block;
+	}
+	.header .nav_right {
+		display: none;
+	}
+	.logo_pc {
+		display: none;
+	}
+	.logo_mo {
+		display: block;
+	}
+	.header {
+		background: #1b3f7b;
+	}
+
+	.home_news .news_com .n_left
+	 {
+		width: 96%;
+		margin: auto;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+	.footer_co .footer_co_fl {
+		width: 50%;
+		margin-left: 2%;
+	}
+	.footer_co .footer_co_fl li {
+		margin-right: 13px;
+	}
+	.footer_co {
+		width: 100%;
+	}
+	.footer_co_rl {
+		width: 48%;
+		margin-left: 0px;
+	}
+	.footer_rl {
+		margin-left: 0;
+	}
+	.footer_co .footer_co_fl li dl {
+		width: 115px;
+	}
+	.footer_rl ol li:nth-of-type(3) {
+		margin-top: 5px;
+		width: 100%;
+		display: block;
+	}
+	.footer_co .footer_co_fl li dt {
+		font-size: 18px;
+	}
+	.footer_co .footer_co_fl li dd a {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 768px) {
+	
+	.autoWidth,.home_news .n_right_co {
+		width: 96%;
+		margin: auto;
+	}
+	.csd_detailes_top h3 {
+		float: left;
+		width: auto!important;
+		line-height: none!important;
+	}
+	.csd_detailes .csd_detailes_top {
+		border-bottom: 1px solid #dfdfdf;
+		width: 100%;
+		float: left;
+	}
+	.zpxx-container {
+		float: left;
+	}
+	.Cam_Rec_list a {
+	
+		width: 46%!important;
+float: left !important;
+		box-sizing: border-box;
+margin-top: 20px;
+margin-left: 1.5%;
+
+	}
+	.h_top {
+		display: none;
+	}
+	.bread {
+		display: none;
+	}
+	.mo_bread {
+		display: inline-block;
+		float: right;
+		padding: 3.75% 2% 2.5% 0;
+	}
+	.about_MIX {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.recruit_fl {
+		width: 100%;
+	}
+	.notice {
+		display: none;
+	}
+	.group {
+		background: none;
+		height: auto;
+	}
+	.group_fl,
+	.group_rl {
+		width: 100%;
+	}
+	.home_news .news_com .n_left {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.home_news .news_com .n_right {
+		width: 100%;
+	}
+	.zi_com .zi_left {
+		width: 100%;
+	}
+	.zi_com .zi_right {
+		width: 100%;
+	}
+	.csd_sos {
+		width: 100%;
+	}
+	.csd_rl_img,
+	.csd_fl_img {
+		float: none;
+	}
+	.csd_sy {
+		width: auto;
+		float: none;
+		border-top: none;
+		border-left: 8px solid #f7f7f7;
+	}
+	.csd_sy h3 {}
+	.tool_fl ul li {
+		width: 100% !important;
+	}
+	.tool_rl form {
+		margin-left: 10px;
+	}
+	.tool_rl div {
+		margin-top: 10px;
+	}
+	.carousel-control_prev,
+	.carousel-control_next,
+	.slick-prev,
+	.slick-next {
+		display: none !important;
+	}
+	.ad,
+	.Commonweal {
+		display: none;
+	}
+	.banner {
+		height: auto;
+	}
+	.home_news .news_com .n_left {
+		float: none;
+	}
+	.n_left_co {
+		width: 96%;
+		text-align: center;
+		margin: auto;
+	}
+	.n_right {
+		position: static;
+	}
+	.n_right_co {
+		margin-left: 0;
+	}
+	.home_news .news_com .n_right {
+		height: auto;
+	}
+	.home_news .news_com .n_right ul li .wen_nei {
+		width:85%;
+	
+	}
+	.product_mobile {
+		display: block;
+	}
+	.top_title {
+		color: #000;
+	}
+	.footer {
+		display: none;
+	}
+	#footer_mo {
+		display: block;
+		clear: both;
+	}
+	.csd_top_fl,
+	.csd_top_rl,
+	.tool_fl,
+	.tool_rl {
+		width: 100%;
+	}
+	.csd_top_rl{
+		margin-top: 50px;
+	}
+	.Forecast_list li {
+		/*width:32%;*/
+		margin-bottom: 2%;
+		margin-left: 1.3%;
+	}.Forecast_list li:last-child{	margin-left: 0.3%;}
+	.common_problem ul>li {
+		width: 100%;
+	}
+	.study_img {
+		width: 100%;
+	}
+	.study_co {
+		width: 100%;
+		margin-right: 0;
+	}
+	.study_top {
+		width: 100%;
+		margin-top: 30px;
+	}
+	.study_co .study_a {
+		width: auto;
+	}
+	.study_co a {
+		width: 50%;
+		display: inline-block;
+		float: left;
+	}
+	.study_base {
+		width: 100%;
+	}
+	.study_base_img {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.recruit_rl,
+	.group_co {
+		width: 100%;
+	}
+	.group_list li p {
+		text-align: center;
+	}
+	.product_center_ul li {
+		width: 46%;
+		margin-right: 0;
+		margin-left: 2%;
+	}
+	.recruit_list ul>li,
+	.recruit_list ul>li img {
+		width: 100%;
+	}
+	.about_img {
+		width: 100%;
+	}
+	.about_zi img {
+		margin-left: 0;
+		width: 100%;
+	}
+	.zi_right h3,
+	.burn_top h3,
+	.csd_detailes_top h3 {
+		padding: 3.75% 0 2.5% 2%!important;
+	}
+
+	.recruit_rl_top {
+		height: 48px;
+	}
+	.recruit_rl_top>div {
+		width: 50%;
+		text-align: center;
+	}
+	.class_list {
+		width: 100%;
+	}
+	.class_list ol>li {
+		width: 100%;
+	}
+	.class_list ol ul li a {
+		font-size: 16 px;
+		width: 95%;
+	}
+	.group_fl_top h3 {
+		font-size: 24px
+	}
+	.product {
+		background: none;
+	}
+	.Clinical_pc,
+	#ulList {
+		display: none;
+	}
+	#ulList_mo,
+	.Clinical_mo {
+		display: block;
+	}
+	.About_us {
+		margin: 10px 0;
+	}
+	.About_us h2 {
+		font-weight: 500;
+		margin-top: 40px;
+	}
+	.home_news .news_com .n_left .imgd {
+		height: auto;
+	}
+	.home_news .news_com .n_left .more {
+		margin: 5% 0 10%;
+	}
+	.home_news .news_com .n_right ul li .ri {
+		width: 17.3%;
+	}
+	.n_right_co {
+		margin-top: 10%;
+	}
+	.product_co,
+	.product {
+		width: 100%;
+		height: auto;
+	}
+	#ulList_mo,
+	.Clinical_mo {
+		width: 98%;
+		margin: auto;
+	}
+	.Research {
+		margin-bottom: 10%;
+	}
+	.home_news .news_com .n_right ul li .ri {
+		width: 80px;
+		height: 80px;
+		margin-left: 0;
+	}
+	.news_tabs {
+		margin-left: 0;
+		margin-top: 10%;
+	}
+}
+
+@media (max-width: 640px) {
+	.copy {
+		text-align: center;
+	}
+	.copy .amap {
+		display: none;
+	}
+	.copy span {
+		width: 100%;
+	}
+	.copy .y_a {
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.copy .y_a .map {
+		display: inline-block;
+	}
+	.pro_ul li {
+		width: 48%;
+		margin-right: 4%;
+	}
+	.pro_ul li:nth-child(3n+3) {
+		margin-right: 4%;
+	}
+	.pro_ul li:nth-child(3n+3):after {
+		display: block;
+	}
+	.pro_ul li:nth-child(2n+2) {
+		margin-right: 0px;
+	}
+	.pro_ul li:nth-child(2n+2):after {
+		display: none;
+	}
+	.pro_ul li:after {
+		content: "";
+		border-right: 1px dashed #ccc;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		right: -3.95%;
+	}
+	.recruit_rl ul li a {
+		width: 70%;
+		margin-top: 20px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: inline-block;
+	}
+	.group_list li {
+		margin-right: 0;
+		text-align: center;
+		width: 48%;
+		margin-left: 2%;
+		margin-top: 20px;
+	}
+	.xm-list2 li {
+		display: block;
+		width: 100%;
+		margin-top: 40px;
+	}
+	.xm-list2 li a {
+		margin: auto;
+		margin-top: 20px;
+	}
+	.xm-one {
+		margin-top: 0px;
+	}
+	.xm-ctext2 {
+		margin-top: 60px;
+	}
+	.product_center_ul li{
+		width: 100%;
+		margin-left: 0;
+		
+	}
+
+}
+
+@media (max-width: 480px) {
+	.home_news .news_com .n_left .imgd .ri i {
+		font-size: 20px;
+		height: 25px;
+		line-height: 25px;
+	}
+	.home_news .news_com .n_left .imgd .ri time {
+		font-size: 10px;
+	}
+	.home_news .news_com .n_right ul li .ri i {
+		font-size: 36px;
+		height: 40px;
+		line-height: 40px;
+	}
+	.home_news .news_com .n_right ul li .ri time {
+		font-size: 12px;
+	}
+	.Cam_Rec_list a{width: 100%!important;float:none;margin-left: 0;}
+	
+	body {
+		font-size: 12px
+	}
+	.tool_rl form input {
+		width: 69px;
+	}
+	.contact p:nth-of-type(1) {
+		font-size: 30px;
+	}
+	.contact p:nth-of-type(2) {
+		font-size: 16px
+	}
+	.Clinical_mo p.heng {
+		width: 16%;
+		height: 2px;
+		top: 36%;
+	}
+	.Clinical_mo .project {
+		font-weight: 500;
+		font-size: 16px;
+		top: 18%;
+	}
+	.Clinical_mo .en_project {
+		font-size: 12px;
+		top: 40%;
+		margin-left: 10%;
+	}
+	.Clinical_mo .pro {
+		top: 50%;
+	}
+	.Clinical_mo .info {
+		bottom: 12%;
+	}
+	.home_news .news_com .n_right ul li .ri {
+		display: none;
+	}
+	.home_news .news_com .n_right ul li .wen_nei {
+		width: 100%;
+	}
+	.news_tabs li {
+		margin-right: 12px;
+	}
+}
+
+@media screen  and (min-width: 736px) and (max-width:1024px) {
+	.home_news .news_com .n_right ul li .wen_nei {
+		width: 87%;
+	}
+}

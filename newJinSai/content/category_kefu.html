@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}animate.css"/>
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div>
+<!--header-->
+{template "content","header"}
+<!--banner-->
+{template "content","bread"}
+	<div class="zi_right_top">
+			{template "content","mo_bread"}
+	</div>
+
+	<div class="zi_com clearfix">
+		
+		<div class="autoWidth">
+		<div class="csd_top">
+			{pc:content action="category" catid="$catid" num="2" siteid="$siteid" order="listorder ASC"}
+			{loop $data $r}
+			<div class="csd_top_fl fl wow fadeInLeft">
+				<div class="csd_fl_img fl">
+					<img class="csd_sos" src="{$r[image]}"/>
+				</div>
+				<div class="csd_sy">
+					<h3>{$r[catname]}</h3>
+					{if $r[description] != null}
+					<p>{$r[description]}</p>
+					<a href="{$r[url]}">[详细内容]</a>
+					{else}
+					<ul>
+							{loop subcat($r['catid']) $r2}
+							<li><a href="{$r2[url]}">{$r2[catname]}</a></li>
+							{/loop}
+						</ul>
+					{/if}
+				</div>
+			</div>
+			{/loop}
+			{/pc}
+		
+		</div>
+	
+		
+		
+		<div class="tools clearfix">
+			<h2>{$CATEGORYS[78]['catname']}</h2>
+			<div class="tool_fl fl wow bounceInLeft">
+				<h4>防伪查询</h4>
+				<p>纹理防伪是以包装材料本身固有的斑纹记号为防伪识别标记的一种防伪技术</p>
+				<p>自然界的斑纹总是千差万别的，如指纹、木纹、石纹、斑马纹、冰纹、干裂的地面等纹理都是随机的、唯一的、不可能有两个完全一样的。利用这一原理，选用纹理清晰的包装材料制成防伪标签，对每一枚标签材料的斑纹记号进行拍摄、编号、建档、存入防伪数据库中</p>
+				<ul>
+					<li><img src="{IMG_PATH}/thems/Security01.png"/></li>
+					<li><img src="{IMG_PATH}/thems/Security02.png"/></li>
+					<li><img src="{IMG_PATH}/thems/Security03.png"/></li>
+				</ul>
+				<p class="Security clearfix">防伪标签样品</p>
+			</div>
+			<div class="tool_rl rl wow bounceInRight">
+				<h4>查询方式</h4>
+				<div><span>方式一:</span>拨打免费服务电话查询:800-8768315或400-6800315</div>
+				<div>
+					<span>方式二:</span>在线查询
+					<form id="Form1" onsubmit="return Checkquery(this)" method="post" name="WWFW" action="http://gensci.yayuan.com/yz.asp" target="_blank"><!--<img style="width:300px;height:150px;" src="http://61.138.179.22/gensci/image.asp?xlh=<%="869500000224"%>&bh=<%="1"%>" />--><!--<img src="http://webs.yayuan.com.cn/Img/TagImg.aspx?key=3b640d1c-567d-4e2a-8fa9-98395b044cf7" />-->
+						<div>
+							<lable>防伪码:</lable>
+							<input onkeypress="AutoNextField(this.value, T2)" maxlength="4" size="4" name="T1" /> - <input onkeypress="AutoNextField(this.value, T3)" maxlength="4" size="4" name="T2" /> - <input maxlength="4" size="4" name="T3" />
+						</div>
+						<div>
+							<lable>验证码:</lable>
+							<input id="vcode" maxlength="4" size="4" name="vcode" />
+							<img id="vcode_img" name="vcode_img" src="{IMG_PATH}/thems/idf.png" />
+							<input id="key" type="hidden" name="key" /> 
+							<span class="point" onclick="oncli();">重新获取验证码</span>
+						</div>
+						<div>
+							<input class="query" type="submit" name="Submit" value="QUERY"/>
+							<input value="0" type="hidden" name="test1" />
+						</div>
+					 </form>
+					           
+					<p>也可以登录中国药品电子监管网官网查询: www.drugadmin.com</p>
+					
+				</div>
+				<div><span>方式三:</span>国家食品药品监督管理总局官方APP</div>
+			</div>
+		</div>
+		
+		
+		<div class="Forecast clearfix">
+			<h2>{$CATEGORYS[81]['catname']}</h2>
+			<ul class="Forecast_list">
+				<li class="wow bounceInLeft"><a href="javascript:void(0);" target="_blank">身高评价</a></li>
+				<li class="wow bounceInLeft"><a href="javascript:void(0);" target="_blank">身高预测</a></li>
+				<li class="wow bounceInLeft"><a href="javascript:void(0);" target="_blank">孩子遗传身高计算</a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="problem clearfix">
+			<h2><span>{$CATEGORYS[82]['catname']}</span></h2>
+			<div class="common_problem">
+					{pc:content action="category" catid="82" num="2" siteid="$siteid" order="listorder ASC"}
+				<ul>
+					{loop $data $c}
+					<li class="wow fadeInUp">
+						<h4>{$r[catname]}</h4>
+						{pc:content action="lists" catid="$c[catid]" num="3" moreinfo="1" return="info"}
+						<ol>
+								{loop $info $v}
+							<li><a href="{$v[url]}">{$v[title]}</a></li>
+							{/loop}
+						</ol>
+						{/pc}
+
+						<div>
+							{pc:get sql="select sum(views) as chakan from v9_hits where catid='$c[catid]'"}
+							{loop $data $r}
+							<span>{$r[chakan]}</span>
+							{/loop}
+							{/pc}							
+							<!--<span>5453</span>-->
+							<a href="{$c[url]}"><img src="{IMG_PATH}/thems/jiantou.png"/></a>
+						</div>
+					</li>
+					{/loop}
+				</ul>
+				{/pc}
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	{template "content","footer"}
+	
+	{template "content","nav"}
+</div>
+<!--Include Js-->
+<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script><script _ue_org_tagname="script" type="text/javascript">function Checkquery(theForm) {						if(WWFW.test1.value == 1){ 							WWFW.test1.value=0; 							return false; 						}								var strAll = theForm.T1.value + theForm.T2.value + theForm.T3.value; 						if (strAll.length == 0){ 							alert("请先输入产品序列号"); 							theForm.T1.focus(); 							return false; 						} 						if (!isn(strAll)) 						{ 							alert("您不能输入带有字母的物品序号。"); 							theForm.T1.focus(); 							return (false); 						}       						var numFirster = strAll.charAt(0); 										if (numFirster == '1' || numFirster == '3' || numFirster == '5' || numFirster == '7' || numFirster == '9'){ 							if (strAll.length < 12){ 								alert("您输入的物品序号不够12位。"); 								theForm.T1.focus(); 								return false; 							} 						}else{ 							if (strAll.length < 12) { 								alert("您输入的物品序号不够12位。"); 								theForm.T1.focus(); 								return false; 							} 							if (strAll.length > 12) { 								alert("您输入的物品序号超过了12位。"); 								theForm.T1.focus(); 								return false; 							} 						} 						if (theForm.vcode.value == "") {							alert("请输入验证码！");							theForm.vcode.focus(); 							return false;						}						return true; 						return (true); 					}					function oncli() {						$.getJSON("http://webs.yayuan.com.cn/RequestVerifCode.asmx/GetVerifCodeImg?callback=?",							{ t: Date.parse(Date()) }							, function(data) {								if (data.key != '-1') {											$("#key").val(data.key);									$("#vcode_img").attr('src', data.codeimgurl)								   								}								else {									alert(data.info);								}							}							);					}					oncli();</script> 
+</body>
+</html>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>						

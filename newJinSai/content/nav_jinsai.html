@@ -1,0 +1,47 @@
+<div class="zi_left fl">
+
+			<div class="top">
+
+				<span class="span1">关于我们</span>
+
+				<span  class="span2">ABOUT US</span>
+
+			</div>
+
+			{pc:content action="category" catid="6" num="25" siteid="$siteid" order="listorder ASC"}
+
+			<ul>
+
+					{loop $data $r}
+
+				<li>
+
+					<a  href="{$r[url]}"<?php if($catid == $r[catid]) echo 'class="sy"';?>>{$r[catname]}</a>
+
+					{if $r[child]}
+
+						<ol>
+
+						{loop subcat($r['catid']) $r2}
+
+						{if $r2 != null}
+
+							<li><a href="{$r2[url]}"<?php if($catid == $r2[catid]) echo 'class="bg_active"';?> >{$r2[catname]}</a></li>
+
+						{/loop}
+
+						{/if}
+
+						</ol>	
+
+					{/if}
+
+				</li>
+
+				{/loop}
+
+			</ul>
+
+			{/pc}
+
+		</div>

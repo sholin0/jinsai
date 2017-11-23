@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}animate.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Match.css"/>
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div>
+	<!--header-->
+	{template "content","header"}
+	<!--banner-->
+	{template "content","bread"}
+	<div class="zi_com about_MIX clearfix">
+		<div class="zi_left fl">
+			<div class="top">
+				<span class="span1">客服中心</span>
+				<span  class="span2">Customer service center</span>
+			</div>
+			{pc:content action="category" catid="40" num="25" siteid="$siteid" order="listorder ASC"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}">{$r[catname]}</a>
+					{if $r[child]}
+		
+					<ol>
+							{loop subcat($r['catid']) $r2}
+						<li>
+							<a href="{$r2[url]}"<?php if($catid == $r2[catid]) echo 'class="bg_active"';?>>{$r2[catname]}</a>
+						</li>
+						{/loop}
+					</ol>
+				
+					{/if}
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+		
+		
+		<div class="zi_right rl">
+			<div class="zi_right_top">
+				<h3>{$catname}</h3>
+				{template "content","mo_bread"}
+			</div>
+			
+		<div class="autoWidth">
+			
+			<div class="tools clearfix">
+				<div class="tool_rl rl tool_rl_dtalis">
+					<h4>查询方式</h4>
+					<div><span>方式一:</span>拨打免费服务电话查询:800-8768315或400-6800315</div>
+					<div>
+						<span>方式二:</span>在线查询
+						<form id="Form1" onsubmit="return Checkquery(this)" method="post" name="WWFW" action="http://gensci.yayuan.com/yz.asp" target="_blank"><!--<img style="width:300px;height:150px;" src="http://61.138.179.22/gensci/image.asp?xlh=<%="869500000224"%>&bh=<%="1"%>" />--><!--<img src="http://webs.yayuan.com.cn/Img/TagImg.aspx?key=3b640d1c-567d-4e2a-8fa9-98395b044cf7" />-->
+							<div>
+								<lable>防伪码:</lable>
+								<input onkeypress="AutoNextField(this.value, T2)" maxlength="4" size="4" name="T1" /> - <input onkeypress="AutoNextField(this.value, T3)" maxlength="4" size="4" name="T2" /> - <input maxlength="4" size="4" name="T3" />
+							</div>
+							<div>
+								<lable>验证码:</lable>
+								<input id="vcode" maxlength="4" size="4" name="vcode" />
+								<img id="vcode_img" name="vcode_img" src="{IMG_PATH}/thems/idf.png" />
+								<input id="key" type="hidden" name="key" /> 
+								<span class="point" onclick="oncli();">重新获取验证码</span>
+							</div>
+							<div>
+								<input class="query" type="submit" name="Submit" value="QUERY"/>
+								<input value="0" type="hidden" name="test1" />
+							</div>
+						 </form>
+						<script _ue_org_tagname="script" type="text/javascript">function Checkquery(theForm) {
+							if(WWFW.test1.value == 1){ 
+								WWFW.test1.value=0; 
+								return false; 
+							}
+			
+							var strAll = theForm.T1.value + theForm.T2.value + theForm.T3.value; 
+							if (strAll.length == 0){ 
+								alert("请先输入产品序列号"); 
+								theForm.T1.focus(); 
+								return false; 
+							} 
+							if (!isn(strAll)) 
+							{ 
+								alert("您不能输入带有字母的物品序号。"); 
+								theForm.T1.focus(); 
+								return (false); 
+							}       
+							var numFirster = strAll.charAt(0); 
+			
+			
+							if (numFirster == '1' || numFirster == '3' || numFirster == '5' || numFirster == '7' || numFirster == '9'){ 
+								if (strAll.length < 12){ 
+									alert("您输入的物品序号不够12位。"); 
+									theForm.T1.focus(); 
+									return false; 
+								} 
+							}else{ 
+								if (strAll.length < 12) { 
+									alert("您输入的物品序号不够12位。"); 
+									theForm.T1.focus(); 
+									return false; 
+								} 
+								if (strAll.length > 12) { 
+									alert("您输入的物品序号超过了12位。"); 
+									theForm.T1.focus(); 
+									return false; 
+								} 
+							} 
+							if (theForm.vcode.value == "") {
+								alert("请输入验证码！");
+								theForm.vcode.focus(); 
+								return false;
+							}
+							return true; 
+							return (true); 
+						}
+						function oncli() {
+							$.getJSON("http://webs.yayuan.com.cn/RequestVerifCode.asmx/GetVerifCodeImg?callback=?",
+								{ t: Date.parse(Date()) }
+								, function(data) {
+									if (data.key != '-1') {
+			
+										$("#key").val(data.key);
+										$("#vcode_img").attr('src', data.codeimgurl)
+									   
+									}
+									else {
+										alert(data.info);
+									}
+								}
+								);
+						}
+						oncli();</script>            
+						<p>也可以登陆也可以登陆也可以登陆也可以登陆</p>
+						
+					</div>
+					<div><span>方式三:</span>国家食品药品监督管理总局官方APP</div>
+				</div>
+			</div>
+				
+
+			</div>
+		</div>
+	</div>
+	
+
+
+	{template "content","footer"}
+	
+	{template "content","nav"}
+</div>
+<!--Include Js-->
+<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>						

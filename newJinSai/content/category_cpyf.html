@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+	<!-- include main css -->	
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}animate.css"/>
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div>
+	<!--header-->
+	{template "content","header"}
+	<!--banner-->
+	{template "content","bread"}
+
+	<div class="autoWidth">
+	<div class="zi_com clearfix">
+	{template "content","mo_bread"}
+			
+		<div class="study">
+			<div class="study_img fl wow fadeInLeft">
+				<img class="img-responsive" src="{IMG_PATH}/upload/study_img.jpg"/>
+			</div>
+			<div class="study_co rl wow fadeInRight">
+				<div class="study_top">
+					<h3>{$catname}</h3>
+					<p>{$description}</p>
+				</div>
+
+				<div class="study_a">
+					{pc:content action="category" catid="$catid" num="2" siteid="$siteid" order="listorder ASC"}
+					{loop $data $r}
+					<a href="{$r[url]}">{$r[catname]}</a>
+					{/loop}
+					{/pc}
+					
+				</div>		
+			</div>
+		</div>
+		<div class="base">
+			<div class="study_base fl wow fadeInLeft">
+				{pc:content action="category" catid="$catid" num="3" siteid="$siteid" order="listorder DESC"}
+				{loop $data $r}
+				{if $r[catid] == 37}
+				<h2>{$r[catname]}</h2>
+				<p>
+					{$r[description]}
+				</p>
+				<a href="{$r[url]}">查看详情</a>
+				{/if}
+				{/loop}
+				{/pc}
+			</div>
+			<div class="study_base_img rl wow fadeInRight">
+				<img class="img-responsive" src="{IMG_PATH}/upload/base_img.jpg"/>
+			</div>
+		</div>
+		
+	</div>
+	</div>
+	
+	
+	
+
+	{template "content","footer"}
+	
+	{template "content","nav"}
+</div>
+<!--Include Js-->
+<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>						

@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>金赛</title>
+	<meta name="keywords" content="金赛">
+	<meta name="description" content="金赛">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css"/>
+	
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<?php
+	if($child){
+	   $child_arrary=explode(',',$arrchildid);
+			$to_url=$CATEGORYS[$child_arrary[0]][url];
+	  echo "<script>window.location.href='".$to_url."'</script>";
+		}
+	?>
+</head>
+<body>
+<div>
+<!--header-->
+{template "content","header"}
+<!--banner-->
+{template "content","bread"}
+
+
+	<div class="zi_com about_MIX clearfix">
+		<div class="zi_left fl">
+			<div class="top">
+				<span class="span1">产品中心</span>
+				<span  class="span2">Product Center</span>
+			</div>
+			{pc:content action="category" catid="9" num="25" siteid="$siteid" order="listorder ASC"}
+			<ul>
+					{loop $data $r}
+				<li>
+					<a class="state" href="{$r[url]}">{$r[catname]}</a>
+						<ol>
+							{loop subcat($r['catid']) $r2}
+							<li><a href="{$r2[url]}" >{$r2[catname]}</a></li>
+							{/loop}
+						</ol>	
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+
+		</div>
+		<div class="zi_right rl">
+			<div class="burn_top">
+				<h3>辅助生殖-金赛恒</h3>
+				{template "content","mo_bread"}
+			</div>
+			
+			<div class="autoWidth">
+			<div class="burn_co">
+				<div class="burn_title">
+					<h2>注射用重组人促卵泡激素<strong></h2>
+				</div>
+				<div class="top_title_warp">
+				<div class="top_title">
+					<ol>
+						<li>更新于2017年8月1日</li>
+						<li><span>1630</span>次</li>
+						<li>分享：
+							<a href="#"><img src="{IMG_PATH}/thems/weixin.png"/></a>
+							<a href="#"><img src="{IMG_PATH}/thems/sina.png"/></a>
+							<a href="#"><img src="{IMG_PATH}/thems/qq.png"/></a>
+							<a href="#"><img src="{IMG_PATH}/thems/in.png"/></a>
+							<a href="#"><img src="{IMG_PATH}/thems/g.png"/></a>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="burn_img">
+				<img src="{IMG_PATH}/upload/assisted.jpg"/>
+			</div>
+			<div class="burn_group">
+				<dl>
+					<dt>[药品名称]</dt>
+					<dd>通用名称：注射用重组人促卵泡激素</dd>
+					<dd>商品名称：金赛恒</dd>
+					<dd>英文名称：Recombinant Human Follitropin for Injection</dd>
+					<dd>汉语拼音：Zhusheyong Chongzu Ren Culuanpaojisu</dd>
+				</dl>
+				<dl>
+					<dt>[成分]</dt>
+					<dd>主要成分名称：重组人促卵泡激素</dd>
+					<dd>活性成分来源：采用中国仓鼠卵巢细胞生产的促卵泡激素</dd>
+					<dd>辅料：蔗糖、甲硫氨酸、聚山梨酯20、磷酸氢二钠、磷酸二氢钠</dd>
+				</dl>
+				<dl>
+					<dt>[性状]</dt>
+					<dd>白色疏松体</dd>
+				</dl>
+				<dl>
+					<dt>[适应症]</dt>
+					<dd>不排卵［包括多囊卵巢综合征（PCOS）］且对枸橼酸克罗米酚治疗无反应的妇女</dd>
+				</dl>
+				<dl>
+					<dt>[规格]</dt>
+					<dd>5.5μg（75IU）/瓶</dd>
+				</dl>
+				<dl class="special">
+					<dt>[禁忌]</dt>
+					<p>在下列情况时禁用本品：</p>
+					<dd>对促卵泡激素或赋形剂过敏</dd>
+					<dd>下丘脑和垂体肿瘤</dd>
+					<dd>非多囊卵巢疾病所引起的卵巢增大或囊肿</dd>
+					<dd>不明原因的妇科出血</dd>
+					<dd>卵巢、子宫或乳腺癌</dd>
+					<p>当不能达到有效反应时，注射用重组人促卵泡激素也应禁忌，例如：</p>
+					<dd>原发性卵巢功能衰竭</dd>
+					<dd>性器官畸形不可妊娠者</dd>
+					<dd>子宫纤维瘤不可妊娠者</dd>
+				</dl>
+				<dl>
+					<dt>[贮藏]</dt>
+					<dd>于原包装中贮于2～8℃保存与运输。置于儿童接触不到的地方，开启并溶解后应立即一次性注射完毕。</dd>
+				</dl>
+				<dl>
+					<dt>[包装]</dt>
+					<dd>玻璃管制注射剂瓶，1瓶/盒</dd>
+				</dl>
+				
+				<dl>
+					<dt>有效期]</dt>
+					<dd>24个月</dd>
+				</dl>
+				<dl>
+					<dt>[执行标准]</dt>
+					<dd>YBS00172015</dd>
+				</dl>
+				<dl>
+					<dt>[批准文号]</dt>
+					<dd>国药准字S2015007</dd>
+				</dl>
+				<dl>
+					<dt>[生产企业]</dt>
+					<dd>企业名称：长春金赛药业有限责任公司</dd>
+				</dl>
+			</div>
+			</div>
+			</div>
+
+		</div>
+	</div>
+	
+	
+	{template "content","footer"}
+	
+	{template "content","nav"}
+</div>
+<!--Include Js-->
+<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>						

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+		<meta name="keywords" content="{$SEO['keyword']}">
+		<meta name="description" content="{$SEO['description']}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- include main css -->
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css" />
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css" />
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css" />
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css" />
+		<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div>
+		<!--header-->
+		{template "content","header"}
+		<!--banner-->
+		{template "content","bread"}
+
+			<!--main-->
+			
+			<div class="autoWidth">
+					{template "content","mo_bread"}
+			<div class="zpxx-container">
+				<div class="zpxx-ctext1">
+					<div class="ztbox1">
+						<a class="blue">{$title}</a>
+						{$content}
+				<div class="zpxx-ctext3">
+					<div class="ct3box">
+						<a>立即申请</a>
+						<a>收藏</a>
+						<a>推荐给朋友</a>
+						<a>返回上一页</a>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--main-->
+
+			{template "content","footer"}
+			
+			{template "content","nav"}
+		</div>
+		<!--Include Js-->
+		<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
+<script>
+	if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+		new WOW().init();
+	};
+</script>

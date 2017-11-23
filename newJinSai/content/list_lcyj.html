@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css"/>
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div>
+	<!--header-->
+	{template "content","header"}
+	<!--banner-->
+	{template "content","bread"}
+
+
+	<div class="zi_com about_MIX clearfix">
+		<div class="zi_left fl">
+			<div class="top">
+				<span class="span1">产品研发</span>
+				<span  class="span2">Product Development</span>
+			</div>
+			{pc:content action="category" catid="34" num="25" siteid="$siteid" order="listorder ASC"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}"<?php if($catid == $r[catid]) echo 'class="sy"';?>>{$r[catname]}</a>
+						{if $r[child]}
+						<ol>
+							{loop subcat($r['catid']) $r2}
+							{if $r2 != null}
+							<li><a href="{$r2[url]}" >{$r2[catname]}</a></li>
+							{/loop}
+							{/if}
+						</ol>	
+						{/if}
+					</li>
+				{/loop}
+			</ul>
+			{/pc}
+
+		</div>
+		<div class="zi_right rl">
+			<div class="zi_right_top">
+				<h3>{$CATEGORYS[$catid][catname]}</h3>
+				{template "content","mo_bread"}
+			</div>
+				
+				<div class="autoWidth">
+				<div class="show_main">
+					<div class="show_top">
+						<p>{$CATEGORYS[$catid][description]}</p>
+					</div>
+					<div class="eg_list">
+							{pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+						<ul>
+							{loop $data $r}
+							<li>
+								<a href="{$r[url]}">
+									<img src="{IMG_PATH}/upload/development_01.jpg"/>
+									<p>{$r[title]}</p>
+								</a>
+							</li>
+							{/loop}
+							{/pc}
+						</ul>
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+	
+
+	{template "content","footer"}
+	
+	{template "content","nav"}	
+</div>
+<!--Include Js-->
+<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>						

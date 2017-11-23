@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}animate.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css"/>
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div>	
+	<!--header-->
+	{template "content","header"}
+	<!--banner-->
+	{template "content","bread"}
+
+
+	<div class="zi_com about_MIX clearfix">
+		<div class="zi_left fl">
+			<div class="top">
+				<span class="span1">社会责任</span>
+				<span  class="span2">Social Responsibility</span>
+			</div>
+			{pc:content action="category" catid="46" num="25" siteid="$siteid" order="listorder ASC"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}">{$r[catname]}</a>
+						{if $r[child]}
+						<ol>
+							{loop subcat($r['catid']) $r2}
+							{if $r2 != null}
+							<li><a href="{$r2[url]}"<?php if($catid == $r2[catid]) echo 'class="bg_active"';?>>{$r2[catname]}</a></li>
+							{/loop}
+							{/if}
+						</ol>	
+						{/if}
+					</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+		
+		<div class="zi_right rl">
+				{template "content","mo_bread"}
+			
+			<div class="autoWidth">
+			<div class="zi_right_top">
+				<h3>公益活动 - 2017健康行</h3>
+				<div class="Healthy_screen">					<form action="" method="post">
+					<span>筛选</span>
+					<select name="">
+						<option value="年份" selected = "selected">年份</option>
+						<option value="2016年">2016年</option>
+						<option value="2015年">2015年</option>
+						<option value="2014年">2014年</option>
+					</select>
+					<select name="">
+						<option value="月份" selected = "selected">月份</option>
+						<option value="7月份">7月份</option>
+						<option value="6月份">6月份</option>
+						<option value="5月份">5月份</option>
+					</select>
+					<select name="">
+						<option value="日期" selected = "selected">日期</option>
+						<option value="7月份">7月份</option>
+						<option value="6月份">6月份</option>
+						<option value="5月份">5月份</option>
+					</select>					<input class="Sos" type="submit" value="筛  选"/>					</form>
+				</div>
+			</div>
+			<div class="Healthy">
+				<ul>
+					{pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+					{loop $data $r}
+					<li class="wow fadeInRight">
+						<div class="fl Healthy_img">
+							<img src="{$r[thumb]}"/>
+						</div>
+						<div class="rl Healthy_con">
+							<dl>
+								<dt><a href="{$r[url]}" target="_blank">{str_cut($r[title], 38)}</a></dt>
+								<dd class="update_time">{date('Y-m-d',$r[inputtime])}</dd>
+								<dd class="Publish_time"><a href="{$r[url]}">{$r['description']}</a></dd>
+							</dl>
+						</div>
+					</li>
+					{/loop}
+				</ul>
+				<div class="page"> 
+				{$pages}
+				 </div>
+				 {/pc}
+			</div>
+			</div>
+			
+		</div>
+	</div>
+	
+
+	{template "content","footer"}
+	
+	{template "content","nav"}
+</div>
+<!--Include Js-->
+<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>

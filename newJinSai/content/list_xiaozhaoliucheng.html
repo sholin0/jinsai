@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+
+		<meta name="keywords" content="{$SEO['keyword']}">
+
+		<meta name="description" content="{$SEO['description']}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- include main css -->
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}bootstrap.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}jquery.mmenu.all.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}Response.css" />
+
+		<link rel="stylesheet" type="text/css" href="{CSS_PATH}thems.css" />
+
+		<!--[if lt IE 9]>
+
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+	</head>
+
+
+
+	<body>
+
+		<div>
+
+			<!--header-->
+
+			{template "content","header"}
+
+			<!--banner-->
+
+			{template "content","bread"}
+
+
+
+
+
+			<!--main-->
+
+			<div class="zi_com about_MIX clearfix">
+
+				<div class="zi_left fl">
+
+					<div class="top">
+
+						<span class="span1">招聘流程</span>
+
+						<span  class="span2">Recruitment Process</span>
+
+					</div>
+
+					{pc:content action="category" catid="72" num="25" siteid="$siteid" order="listorder ASC"}
+
+					<ul>
+
+							{loop $data $r}
+
+						<li>
+
+							<a <?php if($catid == $r[catid]) echo 'class="sy"';?> href="{$r[url]}">{$r[catname]}</a>
+
+						</li>
+
+						{/loop}
+
+					</ul>
+
+					{/pc}
+
+				</div>
+
+				<div class="zi_right rl">
+
+					<div class="zi_right_top">
+
+						<h3>招聘流程</h3>
+
+						{template "content","mo_bread"}
+
+					</div>
+
+					
+
+					<div class="autoWidth">
+
+					<div class="zp-container">
+							{pc:content action="lists" catid="$catid" order="id DESC" num="5" moreinfo="1"}  
+							{loop $data $v}  
+						<div class="zp-container-text">
+
+							<span class="slogan">{$v[title]}</span>
+
+							<div class="zp-text">
+
+								<a>网申时间： {$v[wangshen]}</a>
+
+								<a>宣讲时间： {$v[xuanjiang]}</a>
+
+								<a>在线笔试： {$v[bishi]}</a>
+
+								<a>线路面试： {$v[xianlu]}</a>
+
+								<a>Offer发放： {$v[offer]}</a>
+
+								<a>入职时间： {$v[time]}</a>
+
+								
+
+							</div>
+
+						</div>
+						{/loop}
+						{/pc}
+						
+					</div>
+
+					</div>
+
+				</div>
+
+				</div>
+
+				<!--main-->
+
+
+
+					
+
+			{template "content","footer"}
+
+
+
+			{template "content","nav"}
+
+			</div>
+
+			<!--Include Js-->
+
+			<script src="{JS_PATH}jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}wow.min.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}public.js" type="text/javascript" charset="utf-8"></script>
+
+			<script src="{JS_PATH}require.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>
+
+<script>
+
+	if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+
+		new WOW().init();
+
+	};
+
+</script>
